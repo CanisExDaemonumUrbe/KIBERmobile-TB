@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls">
+
+    <Style x:Key="MainTabbed" TargetType="TabbedPage">
+        <Setter Property="SelectedTabColor" Value="{StaticResource Secondary}" />
+        <Setter Property="UnselectedTabColor" Value="{StaticResource White}" />
+        <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+    </Style>
+
+    <Style x:Key="MainTabbed-Element" TargetType="NavigationPage">
+        <Setter Property="ios:NavigationPage.PrefersLargeTitles" Value="False" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
+        <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+        <Setter Property="BarTextColor" Value="{StaticResource White}" />
+    </Style>
+
+    <Style x:Key="MainTabbed-Element-BigHeader"
+           BasedOn="{StaticResource MainTabbed-Element}"
+           TargetType="NavigationPage">
+        <Setter Property="ios:NavigationPage.PrefersLargeTitles" Value="True" />
+    </Style>
+
+    <Style x:Key="RefreshPage" TargetType="RefreshView">
+        <Setter Property="RefreshColor" Value="{StaticResource Tertiary}" />
+    </Style>
+
+    <Style x:Key="InfoPlate" TargetType="Border">
+        <Setter Property="StrokeShape" Value="RoundRectangle 15 15 15 15" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BackgroundColor"
+                Value="{AppThemeBinding
+                Light={StaticResource White},
+                Dark={StaticResource White}}" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Markup" TargetType="Grid">
+        <Setter Property="RowDefinitions" Value="50, auto, auto" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="Padding" Value="0,0,0,10" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Header-Markup" TargetType="Grid">
+        <Setter Property="Row" Value="0" />
+        <Setter Property="RowDefinitions" Value="25, 25" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="ColumnDefinitions" Value="50, *" />
+        <Setter Property="ColumnSpacing" Value="0" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Header-Background" TargetType="Image">
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Grid.ColumnSpan" Value="2" />
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="Source" Value="background" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Header-Icon" TargetType="Image">
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Margin" Value="10" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Header-FilledLabel" TargetType="Label">
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="FontSize" Value="{OnPlatform iOS=Medium, Android=Medium}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="AvatarWrapper-AvatarBorder" TargetType="Border">
+        <Setter Property="Stroke" Value="{StaticResource Secondary}" />
+        <Setter Property="StrokeThickness" Value="3" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 41" />
+        <Setter Property="HeightRequest" Value="82" />
+        <Setter Property="WidthRequest" Value="82" />
+        <Setter Property="Background" Value="{StaticResource Primary}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style x:Key="AvatarWrapper-InnerMarkup" TargetType="Grid">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="RowSpacing" Value="0" />
+    </Style>
+
+    <Style x:Key="AvatarWrapper-AvatarLabel" TargetType="Label">
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="TextColor" Value="{StaticResource Secondary}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="Large" />
+    </Style>
+
+    <Style x:Key="AvatarWrapper-AvatarImage" TargetType="Image">
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="UserFioLabel" TargetType="Label">
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="FontSize" Value="{OnPlatform Android=Title, iOS=26}" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+    </Style>
+
+    <Style x:Key="User-InfoRow" TargetType="Grid">
+        <Setter Property="ColumnDefinitions" Value="auto, *" />
+        <Setter Property="RowDefinitions" Value="auto,1" />
+        <Setter Property="ColumnSpacing" Value="20" />
+        <Setter Property="RowSpacing" Value="5" />
+        <Setter Property="Padding" Value="15,0" />
+    </Style>
+
+    <Style x:Key="InfoRow-Name" TargetType="Label">
+        <Setter Property="FontSize" Value="{OnPlatform iOS=16, Android=Small}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+    </Style>
+
+    <Style x:Key="InfoRow-Value" TargetType="Label">
+        <Setter Property="FontSize" Value="{OnPlatform iOS=16, Android=Small}" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+        <Setter Property="LineBreakMode" Value="WordWrap" />
+    </Style>
+
+    <Style x:Key="InfoRow-Value-Short" TargetType="Label" BasedOn="{StaticResource InfoRow-Value}">
+        <Setter Property="MaximumWidthRequest" Value="300" />
+        <Setter Property="HorizontalTextAlignment" Value="End" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Footer-Markup" TargetType="Grid">
+        <Setter Property="Grid.Row" Value="2" />
+        <Setter Property="RowDefinitions" Value="30" />
+        <Setter Property="ColumnDefinitions" Value="*, 110, 30" />
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="Margin" Value="0,0,10,00" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Footer-MoreLabel" TargetType="Label">
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="TextColor" Value="{StaticResource Primary}" />
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="HorizontalTextAlignment" Value="End" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Footer-MoreIcon" TargetType="Image">
+        <Setter Property="Grid.Column" Value="2" />
+        <Setter Property="Source" Value="icon_is_clicked_gold" />
+        <Setter Property="Rotation" Value="180" />
+        <Setter Property="Margin" Value="7" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Footer-MoreButton" TargetType="Button">
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="Grid.ColumnSpan" Value="2" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+    </Style>
+
+    <Style x:Key="Profile-UserFio" TargetType="Label">
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="Large" />
+    </Style>
+
+    <Style x:Key="MenuPlate-ButtonWrapper" TargetType="Grid">
+        <Setter Property="ColumnDefinitions" Value="50, *, 30" />
+        <Setter Property="RowDefinitions" Value="25, 25" />
+        <Setter Property="ColumnSpacing" Value="0" />
+        <Setter Property="RowSpacing" Value="0" />
+    </Style>
+
+    <Style x:Key="MenuPlate-ButtonBackground" TargetType="BoxView">
+        <Setter Property="Grid.ColumnSpan" Value="3" />
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Color" Value="{StaticResource Primary}" />
+        <Setter Property="CornerRadius" Value="15" />
+    </Style>
+
+    <Style x:Key="MenuPlate-Button-Icon" TargetType="Image">
+        <Setter Property="Grid.Column" Value="0" />
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Margin" Value="13" />
+    </Style>
+
+    <Style x:Key="MenuPlate-Button-SpanLabel" TargetType="Label">
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="{OnPlatform iOS=Small, Android=Small}" />
+    </Style>
+
+    <Style x:Key="MenuPlate-Button-MoreIcon" TargetType="Image">
+        <Setter Property="Grid.Column" Value="2" />
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Source" Value="icon_more" />
+        <Setter Property="Margin" Value="11" />
+    </Style>
+
+    <Style x:Key="MenuPlate-Button" TargetType="Button">
+        <Setter Property="Grid.ColumnSpan" Value="3" />
+        <Setter Property="Grid.RowSpan" Value="2" />
+        <Setter Property="Margin" Value="-10,-5" />
+        <Setter Property="BackgroundColor" Value="#0000" />
+    </Style>
+
+    <Style x:Key="MenuPlate" TargetType="Border">
+        <Setter Property="Padding" Value="2.5" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 15 15 15 15" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter
+            Property="BackgroundColor"
+            Value="{AppThemeBinding
+                    Light={StaticResource White},
+                    Dark={StaticResource White}}" />
+    </Style>
+
+    <Style x:Key="MenuPlate-Header" TargetType="Grid">
+        <Setter Property="RowDefinitions" Value="auto, 1" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="Padding" Value="5, 0" />
+    </Style>
+
+    <Style x:Key="MenuPlate-Header-Label" TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+    </Style>
+
+    <Style x:Key="MenuPlate-ButtonListWrapper" TargetType="StackLayout">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Spacing" Value="5" />
+    </Style>
+
+    <Style x:Key="HistoryTable-Header-TitleLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{OnPlatform Android=Body, iOS=16}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+    </Style>
+
+    <Style x:Key="HistoryTable-Row-DataLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{OnPlatform Android=Body, iOS=14}" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+    </Style>
+
+    <Style x:Key="HistoryTable-Row-OperationBorder" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 15 15 0 0" />
+    </Style>
+
+    <Style x:Key="HistoryTable-Row-CommentBorder" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray100}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 15 15 0 0" />
+    </Style>
+
+    <Style x:Key="StatusMessage-Border" TargetType="Border">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="Padding" Value="0,10" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 15" />
+        <Setter Property="Margin" Value="0,0,0,10" />
+    </Style>
+
+    <Style x:Key="StatusMessage-Label" TargetType="Label">
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="Form-Row-Wrapper" TargetType="Grid">
+        <Setter Property="RowDefinitions" Value="25,40" />
+        <Setter Property="RowSpacing" Value="0" />
+        <Setter Property="Margin" Value="0,0,0,10" />
+    </Style>
+
+    <Style x:Key="Form-Row-Border" TargetType="Border">
+        <Setter Property="Grid.Row" Value="1" />
+        <Setter Property="Padding" Value="10, 0" />
+        <Setter Property="BackgroundColor"
+                Value="{OnPlatform
+                Android={StaticResource Gray200},
+                iOS=Transparent}" />
+        <Setter Property="StrokeShape" Value="RoundRectangle 10" />
+    </Style>
+
+    <Style x:Key="Form-Row-Entry" TargetType="Entry">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="PlaceholderColor" Value="Black" />
+        <Setter Property="Shadow" Value="False" />
+        <Setter
+            Property="Margin" Value="{OnPlatform
+                    Android=0,
+                    iOS=0 -10}" />
+        <Setter
+            Property="BackgroundColor"
+            Value="{OnPlatform
+                    Android=Transparent,
+                    iOS={StaticResource Gray200}}" />
+    </Style>
+
+    <Style x:Key="Form-Row-Editor" TargetType="Editor">
+        <Setter Property="FontSize" Value="Small" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="PlaceholderColor" Value="Black" />
+        <Setter Property="Shadow" Value="False" />
+        <Setter Property="AutoSize" Value="TextChanges" />
+        <Setter
+            Property="Margin" Value="{OnPlatform
+                    Android=0,
+                    iOS=0 -10}" />
+        <Setter
+            Property="BackgroundColor"
+            Value="{OnPlatform
+                    Android=Transparent,
+                    iOS={StaticResource Gray200}}" />
+    </Style>
+
+    <Style x:Key="Form-Button-OK" TargetType="Button">
+        <Setter
+            Property="BackgroundColor"
+            Value="{AppThemeBinding
+                        Light={StaticResource Secondary},
+                        Dark={StaticResource Secondary}}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryDark}" />
+        <Setter Property="TextTransform" Value="None" />
+        <Setter Property="WidthRequest" Value="150" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="CornerRadius" Value="15" />
+    </Style>
+
+    <Style x:Key="Form-Button-Cancel" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="TextTransform" Value="None" />
+        <Setter Property="WidthRequest" Value="150" />
+        <Setter Property="HeightRequest" Value="45" />
+        <Setter Property="CornerRadius" Value="15" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Header-UpperLabel" TargetType="Label">
+        <Setter Property="Grid.Row" Value="0" />
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="FontSize" Value="Caption" />
+        <Setter Property="VerticalTextAlignment" Value="End" />
+        <Setter Property="Margin" Value="0" />
+    </Style>
+
+    <Style x:Key="InfoPlate-Header-LowerLabel" TargetType="Label">
+        <Setter Property="Grid.Row" Value="1" />
+        <Setter Property="Grid.Column" Value="1" />
+        <Setter Property="LineBreakMode" Value="TailTruncation" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="VerticalTextAlignment" Value="Start" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="Margin" Value="0,-3,20,0" />
+    </Style>
+    
+</ResourceDictionary>

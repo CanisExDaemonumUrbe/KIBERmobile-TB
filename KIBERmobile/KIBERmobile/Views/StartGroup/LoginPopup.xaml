@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<toolkit:Popup
+    x:Class="KIBERmobile.Views.StartGroup.LoginPopup"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:KIBERmobile.ViewModels"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    
+    CanBeDismissedByTappingOutsideOfPopup="False"
+    Color="Transparent"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+
+    <RefreshView
+        Style="{StaticResource RefreshPage}"
+        x:DataType="vm:LoginVM"
+        Command="{Binding RefreshLoginViewCommand}"
+        IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+        <ScrollView
+            x:Name="Wrapper"
+            Padding="10"
+            HorizontalScrollBarVisibility="Never">
+            <StackLayout
+                x:Name="Content">
+                <Border x:Name="LoginFrame"
+                        Style="{StaticResource InfoPlate}">
+                    <Grid Style="{StaticResource InfoPlate-Markup}">
+                        <Grid Style="{StaticResource InfoPlate-Header-Markup}">
+                            <Image Style="{StaticResource InfoPlate-Header-Background}" />
+                            <Image Style="{StaticResource InfoPlate-Header-Icon}"
+                                   Source="icon_key" />
+                            <Label Style="{StaticResource InfoPlate-Header-FilledLabel}"
+                                   Text="Вход в личный кабинет" />
+                        </Grid>
+
+                        <Grid
+                            Grid.Row="1"
+                            Padding="20,10,20,5"
+                            RowSpacing="10"
+                            RowDefinitions="230, auto, 25, auto, auto, 50">
+                            <StackLayout
+                                Grid.Row="0"
+                                Spacing="5"
+                                Margin="0"
+                                Padding="0">
+                                <Image Source="logo"
+                                       HeightRequest="170" />
+                                <Label
+                                    TextColor="{StaticResource Black}"
+                                    HorizontalTextAlignment="Center"
+                                    FontSize="Small"
+                                    FontAttributes="Bold">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span
+                                                Text="ПЕРВАЯ МЕЖДУНАРОДНАЯ КИБЕРШКОЛА " />
+                                            <Span
+                                                Text="БУДУЩЕГО ДЛЯ НОВОГО IT-ПОКОЛЕНИЯ" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+
+                            <Border Style="{StaticResource StatusMessage-Border}"
+                                    Grid.Row="1">
+                                <Label Style="{StaticResource StatusMessage-Label}"
+                                       TextColor="{Binding StatusColor}"
+                                       Text="{Binding StatusMessage}" />
+                            </Border>
+
+                            <Grid Grid.Row="2"
+                                  HorizontalOptions="Center"
+                                  ColumnDefinitions="25, *"
+                                  ColumnSpacing="5">
+                                <Border
+                                    Grid.Column="0"
+                                    BackgroundColor="{StaticResource PrimaryDark}"
+                                    StrokeShape="RoundRectangle 50 50 50 50">
+                                    <Image
+                                        Margin="5"
+                                        Source="icon_forgot_pass" />
+                                </Border>
+                                <Label Grid.Column="1"
+                                       VerticalOptions="Center"
+                                       TextColor="{StaticResource PrimaryDark}"
+                                       Text="Забыли пароль?"
+                                       TextDecorations="Underline"
+                                       FontSize="16">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            NumberOfTapsRequired="1"
+                                            Command="{Binding ForgotPassCommand}" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+
+                            <StackLayout Grid.Row="3">
+                                <Grid Style="{StaticResource Form-Row-Wrapper}">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Row="0"
+                                           Text="Логин" />
+                                    <Border Style="{StaticResource Form-Row-Border}">
+                                        <Entry Style="{StaticResource Form-Row-Entry}"
+                                               Placeholder="Телефон или E-mail"
+                                               Text="{Binding Login}" />
+                                    </Border>
+                                </Grid>
+
+                                <Grid Style="{StaticResource Form-Row-Wrapper}">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Row="0"
+                                           Text="Пароль" />
+                                    <Border Style="{StaticResource Form-Row-Border}">
+                                        <Entry Style="{StaticResource Form-Row-Entry}"
+                                               Placeholder="Пароль"
+                                               IsPassword="True"
+                                               Text="{Binding Password}" />
+                                    </Border>
+                                </Grid>
+                            </StackLayout>
+
+                            <Label Grid.Row="4"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="{StaticResource PrimaryDark}"
+                                   FontSize="12">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Продолжая авторизацию, вы выражаете согласие с " />
+                                        <Span TextColor="{StaticResource Secondary}"
+                                              TextDecorations="Underline"
+                                              Text="Политикой конфиденциальности ">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    NumberOfTapsRequired="1"
+                                                    Command="{Binding OpenPrivatePolicyCommand}" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                        <Span Text="и " />
+                                        <Span TextColor="{StaticResource Secondary}"
+                                              TextDecorations="Underline"
+                                              Text="Правилами пользования системой">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    NumberOfTapsRequired="1"
+                                                    Command="{Binding OpenClubTermsCommand}" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Button Style="{StaticResource Form-Button-OK}"
+                                    Grid.Row="5"
+                                    Text="Войти"
+                                    Clicked="LoginClickedAsync" />
+                        </Grid>
+                    </Grid>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+
+</toolkit:Popup>

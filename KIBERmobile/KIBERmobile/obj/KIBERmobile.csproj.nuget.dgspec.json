@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj": {}
+  },
+  "projects": {
+    "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
+        "projectName": "KIBERmobile",
+        "projectPath": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
+        "packagesPath": "/Users/dgeli/.nuget/packages/",
+        "outputPath": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/dgeli/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "CommunityToolkit.Maui": {
+              "target": "Package",
+              "version": "[9.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24473.5, )"
+            },
+            "Microsoft.Maui.Controls": {
+              "target": "Package",
+              "version": "[9.0.0-rc.2.24503.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

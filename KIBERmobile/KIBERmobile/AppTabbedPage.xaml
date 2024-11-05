@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:view="clr-namespace:KIBERmobile.Views"
+            x:Class="KIBERmobile.AppTabbedPage"
+            Style="{StaticResource MainTabbed}">
+
+    <NavigationPage
+        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Title="Главная"
+        IconImageSource="icon_home">
+        <x:Arguments>
+            <view:MainPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Title="KIBERshop"
+        IconImageSource="icon_kibershop">
+        <x:Arguments>
+            <view:KIBERshopPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        Style="{StaticResource MainTabbed-Element}"
+        Title="Поддержка"
+        IconImageSource="icon_support">
+        <x:Arguments>
+            <view:SupportPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage
+        Style="{StaticResource MainTabbed-Element}"
+        Title="Меню"
+        IconImageSource="icon_menu">
+        <x:Arguments>
+            <view:MenuPage />
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>

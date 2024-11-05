@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIBERmobile", "KIBERmobile\KIBERmobile\KIBERmobile.csproj", "{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIBERmobile.iOS", "KIBERmobile\KIBERmobile.iOS\KIBERmobile.iOS.csproj", "{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Distribution|Any CPU = Distribution|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}.Distribution|Any CPU.ActiveCfg = Distribution|Any CPU
+		{8886D23F-9697-4F3C-8BFB-1D13A493A2BB}.Distribution|Any CPU.Build.0 = Distribution|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Distribution|Any CPU.ActiveCfg = Distribution|Any CPU
+		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Distribution|Any CPU.Build.0 = Distribution|Any CPU
+	EndGlobalSection
+EndGlobal

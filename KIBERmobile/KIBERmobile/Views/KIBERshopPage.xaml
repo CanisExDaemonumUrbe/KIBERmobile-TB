@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="KIBERmobile.Views.KIBERshopPage"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:KIBERmobile.ViewModels"
+    xmlns:m="clr-namespace:KIBERmobile.Models"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+
+    ios:Page.LargeTitleDisplay="Never"
+    BackgroundColor="{StaticResource PrimaryDark}">
+
+    <NavigationPage.TitleView>
+        <Label FontSize="17"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding PageTitle}"
+                          FontAttributes="Bold"
+                          TextColor="{StaticResource White}" />
+                    <Span Text="{Binding Balance}"
+                          FontAttributes="Bold"
+                          TextColor="{StaticResource Secondary}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="30, *"
+              BackgroundColor="Transparent">
+            <RefreshView Grid.RowSpan="2"
+                         Padding="10,0"
+                         Style="{StaticResource RefreshPage}"
+                         x:DataType="vm:KIBERshopVM"
+                         Command="{Binding RefreshViewCommand}"
+                         IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView
+                    VerticalScrollBarVisibility="Never"
+                    ios:ListView.GroupHeaderStyle="Grouped"
+                    ItemsSource="{Binding Items}"
+                    SelectionChanged="GoToItemPageAsync"
+                    SelectionMode="Single"
+                    ItemsUpdatingScrollMode="KeepItemsInView"
+                    Margin="-5,0">
+
+                    <CollectionView.Header>
+                        <Grid Padding="5,35,5,5">
+                            <Border
+                                BackgroundColor="{StaticResource Secondary}"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 10">
+                                <Grid RowDefinitions="auto">
+                                    <Label Grid.Row="0"
+                                           Text="Копи Кибероны и оплачивай ими KIBERтовары!"
+                                           TextColor="{StaticResource Black}"
+                                           FontSize="Medium"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"
+                                           Padding="10" />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </CollectionView.Header>
+
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                         Span="2" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="Normal">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="Transparent" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+
+                                            <VisualState Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="Transparent" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
+                                <Border
+                                    x:DataType="m:Item"
+                                    StrokeShape="RoundRectangle 15 15 15 15"
+                                    StrokeThickness="0"
+                                    BackgroundColor="{StaticResource White}"
+                                    Padding="10">
+
+                                    <Grid Margin="0"
+                                          Padding="0">
+                                        <StackLayout Grid.Row="0"
+                                                     Spacing="5">
+
+                                            <Border
+                                                HeightRequest="150"
+                                                BackgroundColor="{StaticResource White}"
+                                                Stroke="{StaticResource Secondary}"
+                                                StrokeThickness="2"
+                                                StrokeShape="{ OnPlatform iOS=RoundRectangle 10 10 10 10,
+                                        Android=RoundRectangle 4}">
+
+                                                <Grid Margin="0"
+                                                      Padding="0">
+
+                                                    <Image Grid.Row="0"
+                                                           Aspect="AspectFit"
+                                                           Source="image_loading_shop_full" />
+
+                                                    <Image Grid.Row="0"
+                                                           Aspect="AspectFill"
+                                                           Margin="0">
+                                                        <Image.Source>
+                                                            <UriImageSource
+                                                                Uri="{Binding IconImages}" />
+                                                        </Image.Source>
+                                                    </Image>
+                                                </Grid>
+                                            </Border>
+
+                                            <Label
+                                                Text="{Binding Title}"
+                                                LineBreakMode="TailTruncation"
+                                                FontSize="Small"
+                                                FontAttributes="Bold"
+                                                TextColor="{StaticResource Primary}" />
+
+                                            <Label
+                                                FontSize="Medium"
+                                                TextColor="{StaticResource Secondary}"
+                                                VerticalTextAlignment="Center"
+                                                HorizontalTextAlignment="Start">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span
+                                                            Text="{Binding Price}" />
+                                                        <Span
+                                                            Text=" K"
+                                                            FontAttributes="Bold" />
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+                                    </Grid>
+
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                    <CollectionView.Footer>
+                        <StackLayout
+                            Padding="0,10,0,10"
+                            x:Name="FooterWrapper">
+                            <Label
+                                HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            Text="Информация предоставляется согласно "
+                                            TextColor="{StaticResource White}" />
+                                        <Span
+                                            Text="Правилам пользования KIBERшопом"
+                                            TextColor="{StaticResource Secondary}"
+                                            TextDecorations="Underline">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Command="{Binding OpenShopTermsCommand}" />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </CollectionView.Footer>
+
+                </CollectionView>
+            </RefreshView>
+            <Grid Grid.Row="0"
+                  Margin="0,-1,0,0"
+                  RowDefinitions="30"
+                  ColumnDefinitions="*, auto"
+                  ColumnSpacing="-1"
+                  BackgroundColor="Transparent"
+                  HorizontalOptions="Fill"
+                  VerticalOptions="Start">
+
+                <Border Grid.Column="0"
+                        StrokeThickness="1"
+                        Stroke="Black"
+                        BackgroundColor="{StaticResource Tertiary}"
+                        StrokeShape="RoundRectangle 0,0,0,40"
+                        Margin="-1,0,0,0">
+                    <Button Text="История изменения баланса киберонов"
+                            LineBreakMode="TailTruncation"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontSize="17"
+                            TextColor="{StaticResource White}"
+                            Clicked="GoToHistoryPageAsync" />
+                </Border>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

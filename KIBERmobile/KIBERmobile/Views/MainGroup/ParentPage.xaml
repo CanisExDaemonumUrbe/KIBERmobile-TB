@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="KIBERmobile.Views.MainGroup.ParentPage"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+
+    ios:Page.LargeTitleDisplay="Always"
+
+    Title="Родитель"
+    BackgroundColor="{StaticResource PrimaryDark}"
+    Padding="10, 0">
+
+    <ContentPage.Content>
+        <ScrollView
+            VerticalScrollBarVisibility="Never">
+            <StackLayout
+                Margin="0,10"
+                VerticalOptions="Start"
+                Spacing="10">
+                <Border
+                    Style="{StaticResource InfoPlate}">
+                    <Grid
+                        Style="{StaticResource InfoPlate-Markup}">
+                        <Grid
+                            Style="{StaticResource InfoPlate-Header-Markup}">
+                            <Image Style="{StaticResource InfoPlate-Header-Background}" />
+                            <Image Style="{StaticResource InfoPlate-Header-Icon}"
+                                   Source="icon_about_me" />
+                            <Label Style="{StaticResource InfoPlate-Header-FilledLabel}"
+                                   Text="Контактная информация" />
+                        </Grid>
+
+                        <Grid Grid.Row="1"
+                              RowDefinitions="*, auto, auto, auto"
+                              Padding="20, 10, 20, 25"
+                              RowSpacing="10">
+                            <Grid Grid.Row="0"
+                                  Margin="10,0"
+                                  HorizontalOptions="Fill"
+                                  ColumnDefinitions="82, *"
+                                  ColumnSpacing="10">
+                                <Border Style="{StaticResource AvatarWrapper-AvatarBorder}">
+                                    <Grid Style="{StaticResource AvatarWrapper-InnerMarkup}">
+                                        <Label Style="{StaticResource AvatarWrapper-AvatarLabel}"
+                                               Text="{Binding ParentAvatarDummy}" />
+                                        <Image Style="{StaticResource AvatarWrapper-AvatarImage}"
+                                               Source="{Binding ResidentAvatar}" />
+                                    </Grid>
+                                </Border>
+                                <Label Style="{StaticResource UserFioLabel}"
+                                       Text="{Binding ParentFIO}" />
+                            </Grid>
+
+                            <Grid Style="{StaticResource User-InfoRow}"
+                                  Grid.Row="2">
+                                <Label Style="{StaticResource InfoRow-Name}"
+                                       Grid.Column="0"
+                                       Text="Телефон" />
+                                <Label Style="{StaticResource InfoRow-Value-Short}"
+                                       Grid.Column="1"
+                                       Text="{Binding ParentPhone}" />
+                                <BoxView Grid.Row="1"
+                                         Grid.ColumnSpan="2"
+                                         BackgroundColor="{StaticResource PrimaryDark}" />
+                            </Grid>
+
+                            <Grid Style="{StaticResource User-InfoRow}"
+                                  Grid.Row="3">
+                                <Label Style="{StaticResource InfoRow-Name}"
+                                       Grid.Column="0"
+                                       Text="Email" />
+                                <Label Style="{StaticResource InfoRow-Value-Short}"
+                                       Grid.Column="1"
+                                       Text="{Binding ParentEmail}" />
+                                <BoxView Grid.Row="1"
+                                         Grid.ColumnSpan="2"
+                                         BackgroundColor="{StaticResource PrimaryDark}" />
+                            </Grid>
+                        </Grid>
+                        <Grid Style="{StaticResource InfoPlate-Footer-Markup}">
+                            <Label
+                                Style="{StaticResource InfoPlate-Footer-MoreLabel}"
+                                Text="Подробнее" />
+                            <Image
+                                Style="{StaticResource InfoPlate-Footer-MoreIcon}" />
+                            <Button
+                                Style="{StaticResource InfoPlate-Footer-MoreButton}"
+                                Clicked="GoToProfilePageAsync" />
+                        </Grid>
+                    </Grid>
+                </Border>
+
+                <Border Style="{StaticResource InfoPlate}">
+                    <Grid Style="{StaticResource InfoPlate-Markup}">
+                        <Grid Style="{StaticResource InfoPlate-Header-Markup}">
+                            <Image Style="{StaticResource InfoPlate-Header-Background}" />
+                            <Image Style="{StaticResource InfoPlate-Header-Icon}"
+                                   Source="icon_sandglasses" />
+                            <Label Style="{StaticResource InfoPlate-Header-FilledLabel}"
+                                   Text="Об оплате" />
+                        </Grid>
+                        <Grid Grid.Row="1"
+                              RowDefinitions="auto, auto, auto"
+                              RowSpacing="10"
+                              Padding="20, 10, 20, 25">
+                            <Grid Grid.Row="0"
+                                  Style="{StaticResource User-InfoRow}">
+                                <Label Grid.Column="0"
+                                       Style="{StaticResource InfoRow-Name}"
+                                       Text="Ближайшая дата оплаты" />
+                                <Label Grid.Column="1"
+                                       Style="{StaticResource InfoRow-Value}"
+                                       Text="{Binding PaymentDate}" />
+                                <BoxView Grid.Row="1"
+                                         Grid.ColumnSpan="2"
+                                         BackgroundColor="{StaticResource PrimaryDark}" />
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Label Style="{StaticResource InfoRow-Value}"
+                                       Text="Для оплаты следуйте инструкциям на сайте вашего филиала."
+                                       FontSize="Medium"
+                                       HorizontalOptions="Fill"
+                                       LineBreakMode="WordWrap" />
+                            </Grid>
+                            <Grid Grid.Row="2"
+                                  Style="{StaticResource MenuPlate-ButtonWrapper}">
+                                <BoxView Style="{StaticResource MenuPlate-ButtonBackground}" />
+                                <Image Style="{StaticResource MenuPlate-Button-Icon}"
+                                       Source="icon_key" />
+                                <Label Style="{StaticResource MenuPlate-Button-SpanLabel}"
+                                       Text="Перейти на сайт" />
+                                <Image Style="{StaticResource MenuPlate-Button-MoreIcon}" />
+                                <Button Style="{StaticResource MenuPlate-Button}"
+                                        Command="{Binding GoToSitePaymentPageCommand}" />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0-ios</TargetFramework>
+        <SupportedOSPlatformVersion>15.0</SupportedOSPlatformVersion>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>KIBERmobile</RootNamespace>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseMaui>true</UseMaui>
+        <Configurations>Debug;Release;Distribution</Configurations>
+        <Platforms>AnyCPU</Platforms>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <MtouchInterpreter>-all,MyAssembly</MtouchInterpreter>
+        <MtouchUseLlvm>true</MtouchUseLlvm>
+        <MtouchEnableBitcode>false</MtouchEnableBitcode>
+        <AotAssemblies>true</AotAssemblies>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <DebugSymbols>false</DebugSymbols>
+        <CodesignKey>Apple Development: Danil Gelimyanov (6SZLC632D7)</CodesignKey>
+        <WarningLevel>9</WarningLevel>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Distribution' ">
+        <MtouchInterpreter>-all,MyAssembly</MtouchInterpreter>
+        <MtouchUseLlvm>true</MtouchUseLlvm>
+        <MtouchEnableBitcode>false</MtouchEnableBitcode>
+        <AotAssemblies>true</AotAssemblies>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <DebugSymbols>false</DebugSymbols>
+        <CodesignKey>Apple Distribution: KIBERONE L.L.C (5534C6XAWS)</CodesignKey>
+        <WarningLevel>9</WarningLevel>
+        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <MtouchLink>None</MtouchLink>
+      <CodesignKey>Apple Development: Danil Gelimyanov (6SZLC632D7)</CodesignKey>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
+        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0-rc.2.24473.5"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\KIBERmobile\KIBERmobile.csproj"/>
+    </ItemGroup>
+
+</Project>

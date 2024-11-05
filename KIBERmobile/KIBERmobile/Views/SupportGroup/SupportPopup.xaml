@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<toolkit:Popup
+    x:Class="KIBERmobile.Views.SupportGroup.SupportPopup"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:KIBERmobile.ViewModels"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+
+    CanBeDismissedByTappingOutsideOfPopup="True"
+    Color="Transparent"
+    HorizontalOptions="Fill"
+    VerticalOptions="Fill">
+
+    <RefreshView
+        Style="{StaticResource RefreshPage}"
+        x:DataType="vm:SupportFormVM"
+        Command="{Binding RefreshViewCommand}"
+        IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <ScrollView x:Name="Wrapper">
+            <StackLayout x:Name="Content">
+                <Border Style="{StaticResource InfoPlate}">
+                    <Grid Style="{StaticResource InfoPlate-Markup}">
+                        <Grid Style="{StaticResource InfoPlate-Header-Markup}">
+                            <Image Style="{StaticResource InfoPlate-Header-Background}" />
+                            <Image Style="{StaticResource InfoPlate-Header-Icon}"
+                                   Source="{Binding FormIcon}" />
+                            <Label Style="{StaticResource InfoPlate-Header-FilledLabel}"
+                                   Text="{Binding FormName}" />
+                        </Grid>
+                        <Grid Grid.Row="1"
+                              Padding="20,10,20,25"
+                              RowDefinitions="auto, auto, auto, auto, auto, auto, auto, 50"
+                              RowSpacing="0">
+                            <Border Grid.Row="0"
+                                    Style="{StaticResource StatusMessage-Border}">
+                                <Label Style="{StaticResource StatusMessage-Label}"
+                                       TextColor="{Binding StatusColor}"
+                                       Text="{Binding StatusMessage}" />
+                            </Border>
+
+                            <Grid x:Name="NameRow"
+                                  IsVisible="False"
+                                  Grid.Row="1"
+                                  Style="{StaticResource Form-Row-Wrapper}">
+                                <Label Grid.Row="0"
+                                       Style="{StaticResource InfoRow-Name}"
+                                       Text="{Binding FormEntryNameLabel}" />
+                                <Border Style="{StaticResource Form-Row-Border}">
+                                    <Entry Style="{StaticResource Form-Row-Entry}"
+                                           Placeholder="{Binding FormEntryNamePlaceholder}"
+                                           Text="{Binding FormEntryNameValue}"
+                                           Keyboard="Text" />
+                                </Border>
+                            </Grid>
+
+                            <Grid x:Name="SecondNameRow"
+                                  IsVisible="False"
+                                  Grid.Row="2"
+                                  Style="{StaticResource Form-Row-Wrapper}">
+                                <Label Grid.Row="0"
+                                       Style="{StaticResource InfoRow-Name}"
+                                       Text="{Binding FormEntrySecondNameLabel}" />
+                                <Border Style="{StaticResource Form-Row-Border}">
+                                    <Entry Style="{StaticResource Form-Row-Entry}"
+                                           Placeholder="{Binding FormEntrySecondNamePlaceholder}"
+                                           Text="{Binding FormEntrySecondNameValue}"
+                                           Keyboard="Text" />
+                                </Border>
+                            </Grid>
+
+                            <Grid x:Name="PhoneRow"
+                                  IsVisible="False"
+                                  Grid.Row="3"
+                                  Style="{StaticResource Form-Row-Wrapper}">
+                                <Label Grid.Row="0"
+                                       Style="{StaticResource InfoRow-Name}"
+                                       Text="{Binding FormEntryPhoneLabel}" />
+                                <Border Style="{StaticResource Form-Row-Border}">
+                                    <Entry Style="{StaticResource Form-Row-Entry}"
+                                           Placeholder="{Binding FormEntryPhonePlaceholder}"
+                                           Text="{Binding FormEntryPhoneValue}"
+                                           Keyboard="Telephone" />
+                                </Border>
+                            </Grid>
+
+                            <Grid x:Name="EmailRow"
+                                  IsVisible="False"
+                                  Grid.Row="4"
+                                  Style="{StaticResource Form-Row-Wrapper}">
+                                <Label Grid.Row="0"
+                                       Style="{StaticResource InfoRow-Name}"
+                                       Text="{Binding FormEntryEmailLabel}" />
+                                <Border Style="{StaticResource Form-Row-Border}">
+                                    <Entry Style="{StaticResource Form-Row-Entry}"
+                                           Placeholder="{Binding FormEntryEmailPlaceholder}"
+                                           Text="{Binding FormEntryEmailValue}"
+                                           Keyboard="Email" />
+                                </Border>
+                            </Grid>
+
+                            <Grid x:Name="MessageRow"
+                                  IsVisible="False"
+                                  Grid.Row="5"
+                                  Style="{StaticResource Form-Row-Wrapper}"
+                                  RowDefinitions="25, auto">
+                                <Label Grid.Row="0"
+                                       Style="{StaticResource InfoRow-Name}"
+                                       Text="{Binding FormEditorMessageLabel}" />
+                                <Border Grid.Row="1"
+                                        Style="{StaticResource Form-Row-Border}">
+                                    <Editor Style="{StaticResource Form-Row-Editor}"
+                                            Placeholder="{Binding FormEditorMessagePlaceholder}"
+                                            Text="{Binding FormEditorMessageValue}"
+                                            Keyboard="Text" />
+                                </Border>
+                            </Grid>
+
+                            <Grid Grid.Row="7"
+                                  ColumnDefinitions="*, *">
+                                <Button x:Name="SendButton"
+                                        Style="{StaticResource Form-Button-OK}"
+                                        Grid.Column="0"
+                                        Text="Отправить"
+                                        Clicked="SendClicked" />
+                                <Button x:Name="CancelButton"
+                                        Style="{StaticResource Form-Button-Cancel}"
+                                        Grid.Column="1"
+                                        Text="Отмена"
+                                        Clicked="CancelClicked" />
+                                <Button x:Name="SuccessButton"
+                                        IsVisible="False"
+                                        Style="{StaticResource Form-Button-OK}"
+                                        Grid.ColumnSpan="2"
+                                        Text="OK"
+                                        Clicked="CancelClicked" />
+                            </Grid>
+
+                        </Grid>
+                    </Grid>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+    </RefreshView>
+
+</toolkit:Popup>

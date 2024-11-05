@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="KIBERmobile.Views.KIBERshopGroup.KiberonHistoryPage"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:KIBERmobile.ViewModels"
+    xmlns:m="clr-namespace:KIBERmobile.Models"
+    Title="История"
+    BackgroundColor="{StaticResource PrimaryDark}"
+    Padding="10, 0">
+
+    <ContentPage.Content>
+        <RefreshView
+            Style="{StaticResource RefreshPage}"
+            x:DataType="vm:KiberonHistoryVM"
+            Command="{Binding RefreshViewCommand}"
+            IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView
+                VerticalScrollBarVisibility="Never"
+                x:Name="CollectionView"
+                ItemsSource="{Binding Logs}"
+                SelectionMode="None">
+                <CollectionView.Header>
+                    <StackLayout
+                        Padding="0,10,0,0">
+                        <Border
+                            x:Name="Header"
+                            BackgroundColor="{StaticResource Secondary}"
+                            Stroke="{StaticResource Secondary}"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 25 25 0 0">
+                            <Grid
+                                RowDefinitions="40, 1"
+                                RowSpacing="0"
+                                ColumnDefinitions="*,*,*,*"
+                                ColumnSpacing="0">
+                                <Label
+                                    Style="{StaticResource HistoryTable-Header-TitleLabel}"
+                                    Text="Дата"
+                                    Grid.Row="0"
+                                    Grid.Column="0" />
+                                <Label
+                                    Text="Операция"
+                                    Style="{StaticResource HistoryTable-Header-TitleLabel}"
+                                    Grid.Row="0"
+                                    Grid.Column="1" />
+                                <Label
+                                    Text="Кибероны"
+                                    Style="{StaticResource HistoryTable-Header-TitleLabel}"
+                                    Grid.Row="0"
+                                    Grid.Column="2" />
+                                <Label
+                                    Text="Остаток"
+                                    Style="{StaticResource HistoryTable-Header-TitleLabel}"
+                                    Grid.Row="0"
+                                    Grid.Column="3" />
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        Orientation="Vertical"
+                        Span="1"
+                        VerticalItemSpacing="0" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="{StaticResource White}"
+                              x:DataType="m:KiberonLog"
+                              RowDefinitions="25, auto"
+                              RowSpacing="-2"
+                              ColumnDefinitions="auto,*,100,100"
+                              ColumnSpacing="5"
+                              Padding="0,5,0,0"
+                              Margin="1,0">
+                            <Label
+                                Style="{StaticResource HistoryTable-Row-DataLabel}"
+                                Text="{Binding Date}"
+                                Padding="10,0"
+                                Grid.Row="0"
+                                Grid.Column="0" />
+                            <Border
+                                Style="{StaticResource HistoryTable-Row-OperationBorder}"
+                                Margin="20,0"
+                                Grid.Row="0"
+                                Grid.Column="1">
+                                <Label
+                                    Style="{StaticResource HistoryTable-Row-DataLabel}"
+                                    Text="{Binding Sign}"
+                                    TextColor="{Binding Color}"
+                                    FontAttributes="Bold"
+                                    FontSize="20" />
+                            </Border>
+                            <Label Style="{StaticResource HistoryTable-Row-DataLabel}"
+                                   Text="{Binding Amount}"
+                                   Grid.Row="0"
+                                   Grid.Column="2" />
+                            <Label Style="{StaticResource HistoryTable-Row-DataLabel}"
+                                   Text="{Binding Balance}"
+                                   Grid.Row="0"
+                                   Grid.Column="3" />
+                            <Border
+                                Style="{StaticResource HistoryTable-Row-CommentBorder}"
+                                Padding="0,2.5,0,2.5"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="4">
+                                <Label
+                                    Style="{StaticResource HistoryTable-Row-DataLabel}"
+                                    HorizontalTextAlignment="Start"
+                                    Padding="10,0,10,0"
+                                    Text="{Binding Comment}" />
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <StackLayout
+                        Padding="0,0,0,10">
+                        <Border
+                            x:Name="Footer"
+                            Padding="0,0,0,0"
+                            Margin="0,0,0,0"
+                            BackgroundColor="{StaticResource Secondary}"
+                            StrokeThickness="0"
+                            StrokeShape="RoundRectangle 0 0 25 25"
+                            HeightRequest="40" />
+                    </StackLayout>
+                </CollectionView.Footer>
+            </CollectionView>
+        </RefreshView>
+    </ContentPage.Content>
+</ContentPage>

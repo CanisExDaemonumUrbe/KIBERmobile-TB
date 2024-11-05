@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="KIBERmobile.Views.KIBERshopGroup.ItemPage"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+
+    ios:Page.LargeTitleDisplay="Always"
+    Title="{Binding PageTitle}"
+    BackgroundColor="{StaticResource PrimaryDark}">
+
+    <ContentPage.Content>
+        <ScrollView Padding="10"
+                    VerticalScrollBarVisibility="Never">
+            <StackLayout Spacing="10">
+                <Border StrokeShape="RoundRectangle 15 15 15 15"
+                        Padding="0"
+                        BackgroundColor="{StaticResource White}">
+                    <Grid RowDefinitions="auto, auto, 25, auto"
+                          RowSpacing="5"
+                          Padding="15">
+                        <Border Grid.Row="0"
+                                BackgroundColor="{StaticResource White}"
+                                Stroke="{StaticResource Secondary}"
+                                StrokeThickness="2"
+                                StrokeShape="{OnPlatform iOS=RoundRectangle 10, Android=RoundRectangle 4}">
+                            <Grid Margin="0"
+                                  Padding="0"
+                                  RowDefinitions="auto">
+                                <Image Grid.Row="0"
+                                       Aspect="Fill"
+                                       HeightRequest="125"
+                                       WidthRequest="270"
+                                       Source="image_loading_shop_full" />
+                                <Image Grid.Row="0"
+                                       x:Name="ItemImage"
+                                       Aspect="AspectFit"
+                                       Source="{Binding Image}"
+                                       Margin="0"/>
+                                <!-- <ActivityIndicator Grid.Row="0" -->
+                                <!--                    Color="{StaticResource Tertiary}" -->
+                                <!--                    BindingContext="{x:Reference ItemImage}" -->
+                                <!--                    IsRunning="{Binding Path=IsLoading, Source={x:Reference ItemImage}}" -->
+                                <!--                    IsVisible="{Binding Path=IsLoading, Source={x:Reference ItemImage}}" -->
+                                <!--                    HorizontalOptions="Center" -->
+                                <!--                    VerticalOptions="Center"/> -->
+                            </Grid>
+                        </Border>
+
+                        <Label Grid.Row="1"
+                               Text="{Binding Title}"
+                               TextColor="{StaticResource Primary}"
+                               FontSize="{OnPlatform Android=Title, iOS=Subtitle}"
+                               FontAttributes="Bold" />
+
+                        <Label Grid.Row="2"
+                               FontSize="Large"
+                               TextColor="{StaticResource Secondary}"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Start">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Price}" />
+                                    <Span Text=" K"
+                                          FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label Grid.Row="4"
+                               Text="{Binding Description}"
+                               TextColor="Black"
+                               FontSize="{OnPlatform Android=Subtitle, iOS=Medium}"
+                               HorizontalTextAlignment="Start"
+                               HorizontalOptions="Fill" />
+                    </Grid>
+                </Border>
+
+                <Label HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Информация предоставляется согласно "
+                                TextColor="{StaticResource White}" />
+                            <Span
+                                Text="Правилам пользования KIBERшопом"
+                                TextColor="{StaticResource Secondary}"
+                                TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding OpenShopTermsCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
