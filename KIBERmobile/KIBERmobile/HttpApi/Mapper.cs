@@ -71,6 +71,19 @@ public static class Mapper
         return jPass;
     }
 
+    public static JRegistration RegistrationToJRegistration(Registration form)
+    {
+        return new JRegistration()
+        {
+            city_name = form.CityName,
+            fio = form.Fio,
+            email = form.Email,
+            phone_number = form.PhoneNumber,
+            resident_age = form.ResidentAge,
+            manager_email = form.ManagerEmail
+        };
+    }
+
     public static Profile JProfileToProfile(JProfile jProfile, string gateImageUrl)
     {
         var profile = new Profile()
@@ -111,24 +124,6 @@ public static class Mapper
 
         return profile;
     }
-
-    public static JFormFeedback FormFeedbackToJFormFeedback(FormFeedback formCallback)
-    {
-        var jForm = new JFormFeedback()
-        {
-            manager_email = formCallback.ManagerEmail,
-            id = formCallback.Id,
-            feedbackid = formCallback.FeedbackId,
-            ip = "8.8.8.8",
-            email = formCallback.Email,
-            user_name = formCallback.UserName,
-            user_phone = formCallback.UserPhone,
-            field_message = formCallback.Message
-        };
-
-        return jForm;
-    }
-
 
     public static Item JItemToItem(JItem jItem, string gateImageUrl)
     {
@@ -193,20 +188,6 @@ public static class Mapper
             Comment = jKiberonLog.comment
         };
         return log;
-    }
-
-    public static JFormInviteFriend FormInviteToJFormInvite(FormInviteFriend formInviteFriend)
-    {
-        var jForm = new JFormInviteFriend()
-        {
-            user_name = formInviteFriend.UserName,
-            id = formInviteFriend.Id,
-            user_id = formInviteFriend.UserId,
-            to_email = formInviteFriend.ToEmail,
-            to_name = formInviteFriend.ToName
-        };
-
-        return jForm;
     }
 
     public static JInvite InviteFormToJInviteForm(Invite form)

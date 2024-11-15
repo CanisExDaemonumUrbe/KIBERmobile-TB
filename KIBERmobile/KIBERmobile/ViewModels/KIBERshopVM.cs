@@ -13,21 +13,14 @@ public class KIBERshopVM : BaseViewModel
 {
     private bool _isLoaded;
     private int _balance;
-
-    // private string _kiberonChangeMessage;
-    // public string KiberonChangeMessage
-    // {
-    //     get => _kiberonChangeMessage;
-    //     set => SetProperty(ref _kiberonChangeMessage, value);
-    // }
-
+    
     public int Balance
     {
         get => _balance;
         set => SetProperty(ref _balance, value);
     }
 
-    private ObservableCollection<Item> _items => ShopController.Collection;
+    private ref ObservableCollection<Item> _items => ref ShopController.Collection;
     public ObservableCollection<Item> Items { get; }
 
     public KIBERshopVM()
@@ -43,28 +36,9 @@ public class KIBERshopVM : BaseViewModel
 
     public Command OpenShopTermsCommand { get; }
     public Command RefreshViewCommand { get; }
-
-    // private string SetChangeMessage(string cityChangeMessage)
-    // {
-    //     string result;
-    //
-    //     try
-    //     {
-    //         result = string.IsNullOrEmpty(cityChangeMessage)
-    //             ? "Взгляни, на что можно поменять кибероны"
-    //             : cityChangeMessage;
-    //     }
-    //     catch
-    //     {
-    //         result = "Взгляни, на что можно поменять кибероны";
-    //     }
-    //
-    //     return result;
-    // }
-
+    
     private async Task RefreshViewAsync(int cityId)
     {
-        //KiberonChangeMessage = SetChangeMessage(Profile.CityKiberonChangeMessage);
 
         if (ShopController.Status != 200)
         {

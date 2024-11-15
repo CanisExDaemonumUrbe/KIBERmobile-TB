@@ -19,10 +19,16 @@ public partial class LoginPopup : Popup
     {
         await _vm.OnLoginClickedAsync();
 
-        //await Navigation.PopModalAsync();
-
         if (!_vm.IsAuthorized) return;
         var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
         await CloseAsync(true, cts.Token);
+    }
+
+
+    private async void RegistrationClickedAsync(object? sender, TappedEventArgs e)
+    {
+        var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
+        await CloseAsync("guest", cts.Token);
+        
     }
 }

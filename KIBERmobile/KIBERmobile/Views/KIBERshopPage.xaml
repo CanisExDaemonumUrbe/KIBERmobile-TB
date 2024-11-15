@@ -13,9 +13,9 @@
     BackgroundColor="{StaticResource PrimaryDark}">
 
     <NavigationPage.TitleView>
-        <Label FontSize="17"
+        <Label FontSize="{OnPlatform iOS=17, Android=20}"
                VerticalTextAlignment="Center"
-               HorizontalTextAlignment="Center">
+               HorizontalTextAlignment="{OnPlatform iOS=Center, Android=Start}">
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="{Binding PageTitle}"
@@ -109,8 +109,7 @@
                                                 BackgroundColor="{StaticResource White}"
                                                 Stroke="{StaticResource Secondary}"
                                                 StrokeThickness="2"
-                                                StrokeShape="{ OnPlatform iOS=RoundRectangle 10 10 10 10,
-                                        Android=RoundRectangle 4}">
+                                                StrokeShape="RoundRectangle 10">
 
                                                 <Grid Margin="0"
                                                       Padding="0">
@@ -206,6 +205,7 @@
                     <Button Text="История изменения баланса киберонов"
                             LineBreakMode="TailTruncation"
                             BackgroundColor="Transparent"
+                            Padding="{OnPlatform Android=-5}"
                             FontAttributes="Bold"
                             FontSize="17"
                             TextColor="{StaticResource White}"

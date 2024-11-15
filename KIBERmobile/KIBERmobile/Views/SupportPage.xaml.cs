@@ -28,19 +28,16 @@ public partial class SupportPage : ContentPage
 
     private async void RequestCallback(object? sender, EventArgs e)
     {
-        //await this.ShowPopupAsync(new SupportFormPopup("callback"));
         await this.ShowPopupAsync(new SupportPopup("callback"));
     }
 
     private async void InviteFriend(object? sender, EventArgs e)
     {
-        //await this.ShowPopupAsync(new SupportFormPopup("invite"));
         await this.ShowPopupAsync(new SupportPopup("invite"));
     }
 
     private async void TechSupportRequest(object? sender, EventArgs e)
     {
-        //await this.ShowPopupAsync(new SupportFormPopup("tech"));
         await this.ShowPopupAsync(new SupportPopup("tech"));
     }
 }

@@ -29,10 +29,10 @@ public class BaseViewModel : INotifyPropertyChanged
 
     private string GetAppVersion()
     {
-        var baseVersion = "1.4.2:";
+        var baseVersion = "1.5.0:";
 
-        const string androidVersion = "A-2";
-        const string iosVersion = "I-1";
+        const string androidVersion = "A-0";
+        const string iosVersion = "I-0";
 
         if (DevicePlatform == DevicePlatform.iOS) baseVersion += iosVersion;
         if (DevicePlatform == DevicePlatform.Android) baseVersion += androidVersion;
@@ -66,8 +66,8 @@ public class BaseViewModel : INotifyPropertyChanged
     protected static readonly ServerController ServerController = new(Connect);
     public string ServerStatus => ServerController.ServerStatus;
 
-    protected static readonly PassController PassController = new(Connect);
-    protected static Pass Pass => PassController.Pass;
+    protected static readonly AuthorizationController AuthorizationController = new(Connect);
+    protected static Pass Pass => AuthorizationController.Pass;
 
     protected static readonly ProfileController ProfileController = new(Connect);
     public Profile Profile => ProfileController.Profile;

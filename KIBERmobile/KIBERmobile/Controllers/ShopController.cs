@@ -26,7 +26,8 @@ public class ShopController(Connect connect)
     {
         if (_status != 200)
         {
-            var (itemsCollection, status) = await connect.LoadCityShopDataAsync(cityId);
+            var (itemsCollection, status) = 
+                await connect.LoadCityShopDataAsync(cityId);
 
             switch (status)
             {

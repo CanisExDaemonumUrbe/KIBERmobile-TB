@@ -131,6 +131,27 @@ public class Connect
         return resultStatus;
     }
 
+    //ver 1.0.0 - Отправка заявки на регистрацию
+    public async Task<int> SendRegistrationForm(Registration registrationForm)
+    {
+        int resultStatus;
+
+        try
+        {
+            const string postUrl = "user/guest/form/registration";
+
+            var jData = Mapper.RegistrationToJRegistration(registrationForm);
+
+            resultStatus = await PostDataAsync(jData, postUrl);
+        }
+        catch
+        {
+            resultStatus = -1;
+        }
+
+        return resultStatus;
+    }
+
     //ver 1.0.0 (api 2.0.0)
     public async Task<(Pass, int)> LoginUserAsync(string login, string password)
     {
@@ -389,7 +410,7 @@ public class Connect
     //---------------------------//
 
 
-    //Формы обратной связи//
+    //ver 1.0.0 - Формы обратной связи//
     public async Task<int> SendInviteFormAsync(Invite inviteForm)
     {
         int resultStatus;

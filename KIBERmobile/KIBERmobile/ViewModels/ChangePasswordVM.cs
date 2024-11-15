@@ -55,7 +55,7 @@ internal class ChangePasswordVM : BaseViewModel
 
         if (!IsNullOrEmpty(OldPassword, NewPassword, CopyNewPassword))
         {
-            if (OldPassword != PassController.Pass.Password)
+            if (OldPassword != AuthorizationController.Pass.Password)
             {
                 SetStatusWarning("Неверный старый пароль!");
             }
@@ -69,9 +69,9 @@ internal class ChangePasswordVM : BaseViewModel
                 {
                     SetStatusOK("Сохранение...");
 
-                    await PassController.ChangeUserPasswordAsync(NewPassword);
+                    await AuthorizationController.ChangeUserPasswordAsync(NewPassword);
 
-                    switch (PassController.Status)
+                    switch (AuthorizationController.Status)
                     {
                         case 200:
                             Preferences.Remove("password");

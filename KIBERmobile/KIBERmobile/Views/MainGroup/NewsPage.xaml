@@ -65,8 +65,7 @@
 
                                     <Image Grid.Row="0"
                                            IsLoading="True"
-                                           BindingContext="{x:Reference NewsImage}"
-                                           IsVisible="{Binding Path=IsLoading, Source={x:Reference NewsImage}}"
+                                           IsVisible="True"
                                            Aspect="Fill"
                                            HeightRequest="125"
                                            WidthRequest="270"
@@ -74,18 +73,10 @@
 
                                     <Image Grid.Row="0"
                                            x:Name="NewsImage"
-                                           IsVisible="False"
+                                           IsVisible="True"
                                            Source="{Binding Image}"
                                            Aspect="AspectFit"
-                                           Margin="0">
-                                        <Image.Triggers>
-                                            <DataTrigger TargetType="Image"
-                                                         Binding="{Binding Source={x:Reference NewsImage}, Path=IsLoading}"
-                                                         Value="False">
-                                                <Setter Property="IsVisible" Value="True" />
-                                            </DataTrigger>
-                                        </Image.Triggers>
-                                    </Image>
+                                           Margin="0"/>
                                 </Grid>
 
                             </Border>

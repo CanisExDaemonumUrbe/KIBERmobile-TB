@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R1iNaDUYHKA=",
+  "dgSpecHash": "Q+gUcvgwwXU=",
   "success": true,
-  "projectFilePath": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
+  "projectFilePath": "/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
   "expectedPackageFiles": [
     "/Users/dgeli/.nuget/packages/communitytoolkit.maui/9.1.0/communitytoolkit.maui.9.1.0.nupkg.sha512",
     "/Users/dgeli/.nuget/packages/communitytoolkit.maui.core/9.1.0/communitytoolkit.maui.core.9.1.0.nupkg.sha512",

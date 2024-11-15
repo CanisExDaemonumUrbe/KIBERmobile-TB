@@ -25,7 +25,7 @@
                                 BackgroundColor="{StaticResource White}"
                                 Stroke="{StaticResource Secondary}"
                                 StrokeThickness="2"
-                                StrokeShape="{OnPlatform iOS=RoundRectangle 10, Android=RoundRectangle 4}">
+                                StrokeShape="RoundRectangle 10">
                             <Grid Margin="0"
                                   Padding="0"
                                   RowDefinitions="auto">
@@ -39,13 +39,6 @@
                                        Aspect="AspectFit"
                                        Source="{Binding Image}"
                                        Margin="0"/>
-                                <!-- <ActivityIndicator Grid.Row="0" -->
-                                <!--                    Color="{StaticResource Tertiary}" -->
-                                <!--                    BindingContext="{x:Reference ItemImage}" -->
-                                <!--                    IsRunning="{Binding Path=IsLoading, Source={x:Reference ItemImage}}" -->
-                                <!--                    IsVisible="{Binding Path=IsLoading, Source={x:Reference ItemImage}}" -->
-                                <!--                    HorizontalOptions="Center" -->
-                                <!--                    VerticalOptions="Center"/> -->
                             </Grid>
                         </Border>
 

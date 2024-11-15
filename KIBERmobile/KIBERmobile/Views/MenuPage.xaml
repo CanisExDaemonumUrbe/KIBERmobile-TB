@@ -10,6 +10,20 @@
     BackgroundColor="{StaticResource PrimaryDark}"
     Padding="10, 0">
 
+    <NavigationPage.TitleView>
+        <Label FontSize="{OnPlatform iOS=17, Android=20}"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="{OnPlatform iOS=Center, Android=Start}">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Меню"
+                          FontAttributes="Bold"
+                          TextColor="{StaticResource White}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <ScrollView
             VerticalScrollBarVisibility="Never">

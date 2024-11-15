@@ -26,7 +26,7 @@ internal class MenuVM : BaseViewModel
 
     public async Task LogOut()
     {
-        PassController.Clear();
+        AuthorizationController.Clear();
         ProfileController.Clear();
         ShopController.Clear();
         FeedController.Clear();

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIBERmobile", "KIBERmobile\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIBERmobile.iOS", "KIBERmobile\KIBERmobile.iOS\KIBERmobile.iOS.csproj", "{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIBERmobile.Droid", "KIBERmobile\KIBERmobile.Droid\KIBERmobile.Droid.csproj", "{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,11 @@ Global
 		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Distribution|Any CPU.ActiveCfg = Distribution|Any CPU
 		{BE8DA106-3DA2-4DC7-874C-F62EDA4D0A9A}.Distribution|Any CPU.Build.0 = Distribution|Any CPU
+		{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}.Distribution|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F3E86B-6136-4CAF-9AF3-AFC93BD66715}.Distribution|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

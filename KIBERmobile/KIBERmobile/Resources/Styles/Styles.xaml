@@ -4,9 +4,11 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls">
-
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls">
+    
     <Style x:Key="MainTabbed" TargetType="TabbedPage">
+        <Setter Property="android:TabbedPage.ToolbarPlacement" Value="Bottom"/>
         <Setter Property="SelectedTabColor" Value="{StaticResource Secondary}" />
         <Setter Property="UnselectedTabColor" Value="{StaticResource White}" />
         <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />

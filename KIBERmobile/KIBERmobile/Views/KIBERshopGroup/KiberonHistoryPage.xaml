@@ -74,8 +74,13 @@
                               RowSpacing="-2"
                               ColumnDefinitions="auto,*,100,100"
                               ColumnSpacing="5"
-                              Padding="0,5,0,0"
-                              Margin="1,0">
+                              Padding="0,5,0,0">
+                            <Grid.Margin>
+                                <OnPlatform x:TypeArguments="Thickness">
+                                    <On Platform="iOS" Value="1, 0"/>
+                                    <On Platform="Android" Value="0"/>
+                                </OnPlatform>
+                            </Grid.Margin>
                             <Label
                                 Style="{StaticResource HistoryTable-Row-DataLabel}"
                                 Text="{Binding Date}"

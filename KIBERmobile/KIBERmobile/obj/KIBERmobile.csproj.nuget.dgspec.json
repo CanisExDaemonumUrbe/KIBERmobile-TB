@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj": {}
+    "/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/KIBERmobile.csproj": {}
   },
   "projects": {
-    "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj": {
+    "/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/KIBERmobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
+        "projectUniqueName": "/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
         "projectName": "KIBERmobile",
-        "projectPath": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
+        "projectPath": "/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/KIBERmobile.csproj",
         "packagesPath": "/Users/dgeli/.nuget/packages/",
-        "outputPath": "/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/obj/",
+        "outputPath": "/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dgeli/.nuget/NuGet/NuGet.Config"
@@ -79,6 +79,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "ios-arm64": {
+          "#import": []
         }
       }
     }

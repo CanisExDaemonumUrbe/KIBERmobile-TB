@@ -61,9 +61,9 @@ public class StartVM : BaseViewModel
     {
         var isLoaded = false;
 
-        await PassController.GetPassAsync(login, password);
+        await AuthorizationController.GetPassAsync(login, password);
 
-        var status = PassController.Status;
+        var status = AuthorizationController.Status;
 
 
         switch (status)
@@ -153,7 +153,6 @@ public class StartVM : BaseViewModel
 
                     if (await LoadDataAsync(_login, _password))
                         IsAuthorized = true;
-                    //await Shell.Current.GoToAsync($"//{nameof(FeedPage)}");
                     else
                         IsAuthorized = false;
                 }

@@ -13,9 +13,9 @@
     BackgroundColor="{StaticResource PrimaryDark}">
 
     <NavigationPage.TitleView>
-        <Label FontSize="17"
+        <Label FontSize="{OnPlatform iOS=17, Android=20}"
                VerticalTextAlignment="Center"
-               HorizontalTextAlignment="Center">
+               HorizontalTextAlignment="{OnPlatform iOS=Center, Android=Start}">
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="{Binding PageTitle}"
@@ -198,6 +198,7 @@
                         Margin="-1,0,0,0">
                     <Button Text="Резидент"
                             BackgroundColor="Transparent"
+                            Padding="{OnPlatform Android=-5}"
                             FontAttributes="Bold"
                             FontSize="17"
                             TextColor="{StaticResource White}"
@@ -212,6 +213,7 @@
                         Margin="0,0,-1,0">
                     <Button Text="Родитель"
                             BackgroundColor="Transparent"
+                            Padding="{OnPlatform Android=-5}"
                             FontAttributes="Bold"
                             FontSize="17"
                             TextColor="Black"

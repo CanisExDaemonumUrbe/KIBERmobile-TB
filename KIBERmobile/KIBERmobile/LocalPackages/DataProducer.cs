@@ -73,8 +73,10 @@ public static class DataProducer
         return false;
     }
 
-    public static bool IsValidNumber(string number)
+    public static bool IsValidNumber(string? number)
     {
+        if (number == null) return false;
+        
         try
         {
             return Regex.IsMatch(number,
@@ -87,8 +89,10 @@ public static class DataProducer
         }
     }
 
-    public static bool IsValidEmail(string email)
+    public static bool IsValidEmail(string? email)
     {
+        if (email == null) return false;
+        
         try
         {
             // Normalize the domain

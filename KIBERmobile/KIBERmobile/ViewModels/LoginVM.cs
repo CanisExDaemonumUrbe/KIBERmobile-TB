@@ -1,4 +1,5 @@
-﻿using static KIBERmobile.LocalPackages.DataProducer;
+﻿using KIBERmobile.Views.GuestGroup;
+using static KIBERmobile.LocalPackages.DataProducer;
 
 namespace KIBERmobile.ViewModels;
 

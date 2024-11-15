@@ -12,7 +12,7 @@ namespace KIBERmobile.Controllers;
 /// <summary>
 /// Ver: 0.2 - Load if empty
 /// </summary>
-public class PassController(Connect connect)
+public class AuthorizationController(Connect connect)
 {
     private Pass _pass = new();
 
@@ -22,17 +22,20 @@ public class PassController(Connect connect)
 
     public ref int Status => ref _status;
 
+    public async Task SendRegistrationAsync(Registration registrationForm)
+    {
+        var responseResult = await connect.SendRegistrationForm(registrationForm);
+        _status = responseResult;
+    }
+    
     public async Task GetPassAsync(string login, string password)
     {
-        if (_status != 200)
-        {
-            var (pass, status) = await connect.LoginUserAsync(login, password);
-            _pass = pass;
-            _status = status;
-        }
+        var (pass, status) = await connect.LoginUserAsync(login, password);
+        _pass = pass;
+        _status = status;
+        
     }
-
-
+    
     public async Task ChangeUserPasswordAsync(string newPassword)
     {
         var responseResult = await connect.ChangeUserPasswordAsync(_pass, newPassword);
