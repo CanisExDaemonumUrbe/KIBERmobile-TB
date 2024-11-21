@@ -11,3 +11,17 @@
 /Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/obj/Release/net9.0/refint/KIBERmobile.dll
 /Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.pdb
 /Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/obj/Release/net9.0/ref/KIBERmobile.dll
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/bin/Release/net9.0/KIBERmobile.deps.json
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/bin/Release/net9.0/KIBERmobile.dll
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/bin/Release/net9.0/KIBERmobile.pdb
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.csproj.AssemblyReference.cache
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.AssemblyInfoInputs.cache
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.AssemblyInfo.cs
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.csproj.CoreCompileInputs.cache
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.sourcelink.json
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/XamlC.stamp
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.dll
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/refint/KIBERmobile.dll
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/KIBERmobile.pdb
+/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/obj/Release/net9.0/ref/KIBERmobile.dll

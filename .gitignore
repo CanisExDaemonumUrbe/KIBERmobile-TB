@@ -1,5 +1,6 @@
 .idea/
 KIBERmobile/KIBERmobile.iOS/bin
 KIBERmobile/KIBERmobile.iOS/obj
-
+KIBERmobile/KIBERmobile.Droid/bin
+KIBERmobile/KIBERmobile.Droid/obj
 .DS_Store

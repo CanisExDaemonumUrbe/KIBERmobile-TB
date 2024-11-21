@@ -34,7 +34,7 @@
               BackgroundColor="Transparent">
             <RefreshView Grid.RowSpan="2"
                          x:Name="RefreshView"
-                         Padding="10,0"
+                         Margin="10,0"
                          Style="{StaticResource RefreshPage}"
                          x:DataType="vm:FeedVM"
                          Command="{Binding RefreshViewCommand}"

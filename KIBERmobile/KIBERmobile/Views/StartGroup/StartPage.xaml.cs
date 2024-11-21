@@ -1,6 +1,5 @@
 using CommunityToolkit.Maui.Views;
 using KIBERmobile.ViewModels;
-using KIBERmobile.Views.GuestGroup;
 
 namespace KIBERmobile.Views.StartGroup;
 
@@ -30,13 +29,6 @@ public partial class StartPage : ContentPage
             {
                 if (boolResult)
                     Application.Current.MainPage = new AppTabbedPage();
-            }
-            else
-            {
-                if (result as string == "guest")
-                {
-                    App.Current.MainPage = new GuestPage();
-                }
             }
                 
         }

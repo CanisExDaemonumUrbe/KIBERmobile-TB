@@ -1,4 +1,8 @@
 is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
 build_property.TargetFramework = net9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -8,115 +12,115 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KIBERmobile
-build_property.ProjectDir = /Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/
+build_property.ProjectDir = /Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/
 build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/App.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/AppTabbedPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/AppTabbedPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.AppTabbedPage.xaml
 build_metadata.AdditionalFiles.TargetPath = AppTabbedPage.xaml
 build_metadata.AdditionalFiles.RelativePath = AppTabbedPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Resources/Styles/Colors.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Resources/Styles/Styles.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/KIBERshopGroup/ItemPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/KIBERshopGroup/ItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.KIBERshopGroup.ItemPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/KIBERshopGroup/ItemPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/KIBERshopGroup/ItemPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/KIBERshopGroup/KiberonHistoryPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/KIBERshopGroup/KiberonHistoryPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.KIBERshopGroup.KiberonHistoryPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/KIBERshopGroup/KiberonHistoryPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/KIBERshopGroup/KiberonHistoryPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/KIBERshopPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/KIBERshopPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.KIBERshopPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/KIBERshopPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/KIBERshopPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MainGroup/NewsPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MainGroup/NewsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MainGroup.NewsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MainGroup/NewsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MainGroup/NewsPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MainGroup/ParentPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MainGroup/ParentPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MainGroup.ParentPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MainGroup/ParentPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MainGroup/ParentPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MainGroup/ProfileGroup/ChangePasswordPopup.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MainGroup/ProfileGroup/ChangePasswordPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MainGroup.ProfileGroup.ChangePasswordPopup.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MainGroup/ProfileGroup/ChangePasswordPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MainGroup/ProfileGroup/ChangePasswordPopup.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MainGroup/ProfileGroup/ProfilePage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MainGroup/ProfileGroup/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MainGroup.ProfileGroup.ProfilePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MainGroup/ProfileGroup/ProfilePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MainGroup/ProfileGroup/ProfilePage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MainGroup/ResidentPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MainGroup/ResidentPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MainGroup.ResidentPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MainGroup/ResidentPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MainGroup/ResidentPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MainPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MainPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/MenuPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/MenuPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.MenuPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/MenuPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/MenuPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/StartGroup/LoginPopup.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/StartGroup/LoginPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.StartGroup.LoginPopup.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/StartGroup/LoginPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/StartGroup/LoginPopup.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/StartGroup/StartPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/StartGroup/StartPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.StartGroup.StartPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/StartGroup/StartPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/StartGroup/StartPage.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/SupportGroup/SupportPopup.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/SupportGroup/SupportPopup.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.SupportGroup.SupportPopup.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/SupportGroup/SupportPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = Views/SupportGroup/SupportPopup.xaml
 
-[/Users/dgeli/Documents/GitRepo/3.0/iOS/KIBERmobile/KIBERmobile/KIBERmobile/Views/SupportPage.xaml]
+[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/SupportPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.SupportPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views/SupportPage.xaml

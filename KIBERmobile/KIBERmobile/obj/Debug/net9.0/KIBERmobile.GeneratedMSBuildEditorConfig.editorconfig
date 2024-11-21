@@ -38,18 +38,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Resources.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
-[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/GuestGroup/GuestPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.GuestGroup.GuestPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views/GuestGroup/GuestPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views/GuestGroup/GuestPage.xaml
-
-[/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/GuestGroup/RegisterPopup.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.GuestGroup.RegisterPopup.xaml
-build_metadata.AdditionalFiles.TargetPath = Views/GuestGroup/RegisterPopup.xaml
-build_metadata.AdditionalFiles.RelativePath = Views/GuestGroup/RegisterPopup.xaml
-
 [/Users/dgeli/Documents/GitRepo/KIBERmobile-TB/KIBERmobile/KIBERmobile/Views/KIBERshopGroup/ItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = KIBERmobile.Views.KIBERshopGroup.ItemPage.xaml

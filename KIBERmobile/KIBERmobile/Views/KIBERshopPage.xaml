@@ -33,11 +33,16 @@
         <Grid RowDefinitions="30, *"
               BackgroundColor="Transparent">
             <RefreshView Grid.RowSpan="2"
-                         Padding="10,0"
                          Style="{StaticResource RefreshPage}"
                          x:DataType="vm:KIBERshopVM"
                          Command="{Binding RefreshViewCommand}"
                          IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <RefreshView.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS" Value="10,0"/>
+                        <On Platform="Android" Value="5,0"/>
+                    </OnPlatform>
+                </RefreshView.Margin>
                 <CollectionView
                     VerticalScrollBarVisibility="Never"
                     ios:ListView.GroupHeaderStyle="Grouped"

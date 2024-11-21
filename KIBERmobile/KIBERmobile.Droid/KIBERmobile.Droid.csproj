@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>KIBERmobile</RootNamespace>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseMaui>true</UseMaui>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+        <AndroidLinkTool>r8</AndroidLinkTool>
+        <AndroidPackageFormat>aab</AndroidPackageFormat>
+        <DebugType>none</DebugType>
+        <Prefer32bit>true</Prefer32bit>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+        <AndroidLinkMode>None</AndroidLinkMode>
+        <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui" Version="9.1.0" />
+        <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0-rc.2.24473.5"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\KIBERmobile\KIBERmobile\KIBERmobile.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\drawable-hdpi\" />
+      <Folder Include="Resources\drawable-mdpi\" />
+      <Folder Include="Resources\drawable-xhdpi\" />
+      <Folder Include="Resources\drawable-xxhdpi\" />
+      <Folder Include="Resources\drawable-xxxhdpi\" />
+    </ItemGroup>
+
+</Project>
