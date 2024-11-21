@@ -168,21 +168,6 @@
                                     BackgroundColor="{StaticResource PrimaryDark}" />
                             </Grid>
 
-                            <Grid
-                                Style="{StaticResource User-InfoRow}"
-                                Grid.Row="2">
-                                <Label
-                                    Style="{StaticResource InfoRow-Name}"
-                                    Grid.Column="0"
-                                    Text="Возраст" />
-                                <Label Style="{StaticResource InfoRow-Value-Short}"
-                                       Grid.Column="1"
-                                       Text="{Binding ResidentAge}" />
-                                <BoxView Grid.Row="1"
-                                         Grid.ColumnSpan="2"
-                                         BackgroundColor="{StaticResource PrimaryDark}" />
-                            </Grid>
-
                             <Grid Style="{StaticResource User-InfoRow}"
                                   Grid.Row="3">
                                 <Label Style="{StaticResource InfoRow-Name}"
