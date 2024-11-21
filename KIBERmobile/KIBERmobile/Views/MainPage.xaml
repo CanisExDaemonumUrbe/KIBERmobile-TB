@@ -148,7 +148,7 @@
                                        LineBreakMode="WordWrap"
                                        VerticalOptions="Fill"
                                        VerticalTextAlignment="Center"
-                                       Text="{Binding ResidentFIO}" />
+                                       Text="Резидент Кибершколы" />
                             </Grid>
 
                             <Grid
@@ -166,21 +166,6 @@
                                     Grid.Row="1"
                                     Grid.ColumnSpan="2"
                                     BackgroundColor="{StaticResource PrimaryDark}" />
-                            </Grid>
-
-                            <Grid
-                                Style="{StaticResource User-InfoRow}"
-                                Grid.Row="2">
-                                <Label
-                                    Style="{StaticResource InfoRow-Name}"
-                                    Grid.Column="0"
-                                    Text="Возраст" />
-                                <Label Style="{StaticResource InfoRow-Value-Short}"
-                                       Grid.Column="1"
-                                       Text="{Binding ResidentAge}" />
-                                <BoxView Grid.Row="1"
-                                         Grid.ColumnSpan="2"
-                                         BackgroundColor="{StaticResource PrimaryDark}" />
                             </Grid>
 
                             <Grid Style="{StaticResource User-InfoRow}"
@@ -203,7 +188,7 @@
                                        Text="Филиал" />
                                 <Label Style="{StaticResource InfoRow-Value-Short}"
                                        Grid.Column="1"
-                                       Text="{Binding ResidentCity}" />
+                                       Text="Кибершкола" />
                                 <BoxView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          BackgroundColor="{StaticResource PrimaryDark}" />
@@ -216,7 +201,7 @@
                                        Text="Локация" />
                                 <Label Style="{StaticResource InfoRow-Value-Short}"
                                        Grid.Column="1"
-                                       Text="{Binding ResidentLocation}" />
+                                       Text="Центр" />
                                 <BoxView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          BackgroundColor="{StaticResource PrimaryDark}" />
@@ -229,7 +214,7 @@
                                        Text="Группа" />
                                 <Label Style="{StaticResource InfoRow-Value-Short}"
                                        Grid.Column="1"
-                                       Text="{Binding ResidentGroup}" />
+                                       Text="Средняя" />
                                 <BoxView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          BackgroundColor="{StaticResource PrimaryDark}" />

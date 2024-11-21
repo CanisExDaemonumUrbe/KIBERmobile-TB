@@ -61,7 +61,7 @@
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Row="0"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentFIO}" />
+                                           Text="Резидент" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -87,7 +87,7 @@
                                            Text="Номер телефона" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentNumber}" />
+                                           Text="+7(ХХХ)ХХХ-ХХ-ХХ" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -100,7 +100,7 @@
                                            Text="Email" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding Email}" />
+                                           Text="my@kiber-one.com"/>
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -126,7 +126,7 @@
                                            Text="Номер родителя" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ParentPhone}" />
+                                           Text="+7(ХХХ)ХХХ-ХХ-ХХ" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -165,7 +165,7 @@
                                            Text="Филиал" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentCity}" />
+                                           Text="Кибершкола" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -178,7 +178,7 @@
                                            Text="Локация" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentLocation}" />
+                                           Text="Центр" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -191,7 +191,7 @@
                                            Text="Группа" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentGroup}" />
+                                           Text="Средняя" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />

@@ -40,7 +40,7 @@
                                        Text="Название" />
                                 <Label Grid.Column="1"
                                        Style="{StaticResource InfoRow-Value}"
-                                       Text="{Binding CityName}" />
+                                       Text="Кибершкола" />
                                 <BoxView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          BackgroundColor="{StaticResource PrimaryDark}" />
@@ -53,7 +53,7 @@
                                        Text="Телефон" />
                                 <Label Grid.Column="1"
                                        Style="{StaticResource InfoRow-Value}"
-                                       Text="{Binding CityPhone}" />
+                                       Text="+7(XXX)XXX-XX-XX" />
                                 <BoxView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          BackgroundColor="{StaticResource PrimaryDark}" />
@@ -66,7 +66,7 @@
                                        Text="Email" />
                                 <Label Grid.Column="1"
                                        Style="{StaticResource InfoRow-Value}"
-                                       Text="{Binding CityEmail}" />
+                                       Text="branch@kiber-one.com" />
                                 <BoxView Grid.Row="1"
                                          Grid.ColumnSpan="2"
                                          BackgroundColor="{StaticResource PrimaryDark}" />
