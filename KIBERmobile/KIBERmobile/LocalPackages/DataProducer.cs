@@ -5,6 +5,11 @@ namespace KIBERmobile.LocalPackages;
 
 public static class DataProducer
 {
+    public static int SetInt(int? value)
+    {
+        return value ?? 0;
+    }
+    
     public static int SetInt(string? value)
     {
         int result;
@@ -20,6 +25,22 @@ public static class DataProducer
 
         return result;
     }
+
+    public static string SetString(int? value)
+    {
+        string result;
+
+        try
+        {
+            result = value.ToString() ?? "Не указано";
+        }
+        catch
+        {
+            result = "Упс... Что-то пошло нет так";
+        }
+
+        return result.Trim();
+    }
     
     public static string SetString(string? value)
     {
@@ -34,8 +55,26 @@ public static class DataProducer
             result = "Упс... Что-то пошло нет так";
         }
 
-        return result;
+        return result.Trim();
 
+    }
+    
+    public static string SetDateTime(string? rawDateTime)
+    {
+        string result;
+
+        try
+        {
+            result = IsNullOrEmpty(rawDateTime)
+                ? "Не указано"
+                : DateTime.Parse(rawDateTime).ToString("dd.MM.yyyy");
+        }
+        catch
+        {
+            result = "Упс! Что-то пошло не так";
+        }
+
+        return result;
     }
     
     public static ImageSource SetImageSource(string? imgUrl, string size)

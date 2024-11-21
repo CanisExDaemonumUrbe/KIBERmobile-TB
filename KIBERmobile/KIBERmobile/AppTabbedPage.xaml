@@ -3,7 +3,7 @@
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:view="clr-namespace:KIBERmobile.Views"
-            
+
             x:Class="KIBERmobile.AppTabbedPage"
             Style="{StaticResource MainTabbed}">
 
@@ -26,16 +26,16 @@
     </NavigationPage>
 
     <NavigationPage
-        Style="{StaticResource MainTabbed-Element}"
-        Title="Поддержка"
-        IconImageSource="icon_support">
+        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Title="Новости"
+        IconImageSource="icon_news">
         <x:Arguments>
-            <view:SupportPage />
+            <view:FeedPage/>
         </x:Arguments>
     </NavigationPage>
 
     <NavigationPage
-        Style="{StaticResource MainTabbed-Element}"
+        Style="{StaticResource MainTabbed-Element-BigHeader}"
         Title="Меню"
         IconImageSource="icon_menu">
         <x:Arguments>

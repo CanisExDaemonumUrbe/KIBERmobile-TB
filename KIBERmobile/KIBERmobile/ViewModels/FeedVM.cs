@@ -8,32 +8,13 @@ namespace KIBERmobile.ViewModels;
 internal class FeedVM : BaseViewModel
 {
     private bool _isLoaded;
-    private int _dayForPay;
-    private Color? _dayForPayColor;
-
-    public int DayForPay
-    {
-        get => _dayForPay;
-        set => SetProperty(ref _dayForPay, value);
-    }
-
-    public Color? DayForPayColor
-    {
-        get => _dayForPayColor;
-        set => SetProperty(ref _dayForPayColor, value);
-    }
+    
 
     private ref ObservableCollection<News> _news => ref FeedController.Collection;
     public ObservableCollection<News> News { get; }
 
     public FeedVM()
     {
-        var tDayForPay = (int)(DateTime.Parse(Profile.ResidentPayDay) - DateTime.Now).TotalDays + 1;
-
-        PageTitle = "Дней до оплаты: ";
-        DayForPay = tDayForPay < 0 ? 0 : tDayForPay;
-        DayForPayColor = DayForPay <= 10 ? StatusColors.Error : StatusColors.OK;
-
         RefreshViewCommand = new Command(async () => await RefreshViewAsync(Profile.CityId));
         News = new ObservableCollection<News>();
         OpenFeedTermsCommand = new Command(async () =>

@@ -13,7 +13,13 @@ public partial class MenuPage : ContentPage
         BindingContext = _vm = new MenuVM();
         InitializeComponent();
 
+        SupportButton.Clicked += SupportClickedAsync!;
         LogOutButton.Clicked += LogOutClickedAsync!;
+    }
+
+    private async void SupportClickedAsync(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new SupportPage());
     }
 
     private async void LogOutClickedAsync(object sender, EventArgs e)

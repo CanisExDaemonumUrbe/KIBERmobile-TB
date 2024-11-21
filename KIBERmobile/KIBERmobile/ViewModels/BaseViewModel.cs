@@ -29,7 +29,7 @@ public class BaseViewModel : INotifyPropertyChanged
 
     private string GetAppVersion()
     {
-        var baseVersion = "1.4.3:";
+        var baseVersion = "1.4.4:";
 
         const string androidVersion = "A-0";
         const string iosVersion = "I-0";

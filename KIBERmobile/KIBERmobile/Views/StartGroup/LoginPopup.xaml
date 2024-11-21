@@ -21,7 +21,7 @@
 
         <ScrollView
             x:Name="Wrapper"
-            Padding="10"
+            Padding="10,10,10,0"
             HorizontalScrollBarVisibility="Never">
             <StackLayout
                 x:Name="Content">

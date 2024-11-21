@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="KIBERmobile.Views.MainGroup.NewsPage"
+
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+
+    ios:Page.LargeTitleDisplay="Always"
+    BackgroundColor="{StaticResource PrimaryDark}"
+    Title="{Binding PageTitle}">
+
+    <ContentPage.Content>
+        <ScrollView Padding="10"
+                    VerticalScrollBarVisibility="Never">
+
+            <StackLayout
+                Spacing="10">
+
+                <Border
+                    Style="{StaticResource InfoPlate}">
+
+                    <Grid
+                        Style="{StaticResource InfoPlate-Markup}">
+
+                        <Grid
+                            Style="{StaticResource InfoPlate-Header-Markup}">
+
+                            <Image
+                                Style="{StaticResource InfoPlate-Header-Background}" />
+
+                            <Image
+                                Style="{StaticResource InfoPlate-Header-Icon}"
+                                Source="{Binding Type}" />
+
+                            <Label
+                                Style="{StaticResource InfoPlate-Header-FilledLabel}"
+                                Text="{Binding Date}" />
+
+                        </Grid>
+
+                        <Grid Grid.Row="1"
+                              Padding="20"
+                              RowDefinitions="auto, auto, auto, auto"
+                              RowSpacing="10"
+                              ColumnDefinitions="*">
+
+                            <Label Grid.Row="0"
+                                   Text="{Binding Title}"
+                                   TextColor="{StaticResource Primary}"
+                                   FontSize="{OnPlatform Android=Title, iOS=Subtitle}"
+                                   FontAttributes="Bold"
+                                   HorizontalTextAlignment="Center"
+                                   HorizontalOptions="Fill" />
+
+                            <Border Grid.Row="1"
+                                    BackgroundColor="{StaticResource White}"
+                                    Stroke="{StaticResource Secondary}"
+                                    StrokeThickness="2"
+                                    StrokeShape="RoundRectangle 10">
+
+                                <Grid Margin="0"
+                                      Padding="0">
+
+                                    <Image Grid.Row="0"
+                                           IsLoading="True"
+                                           IsVisible="True"
+                                           Aspect="Fill"
+                                           HeightRequest="125"
+                                           WidthRequest="270"
+                                           Source="image_loading_shop_full" />
+
+                                    <Image Grid.Row="0"
+                                           x:Name="NewsImage"
+                                           IsVisible="True"
+                                           Source="{Binding Image}"
+                                           Aspect="AspectFit"
+                                           Margin="0"/>
+                                </Grid>
+
+                            </Border>
+
+                            <Label
+                                Grid.Row="2"
+
+                                LineBreakMode="WordWrap"
+                                Text="{Binding Anons}"
+                                TextColor="Black"
+                                FontSize="{OnPlatform Android=Subtitle, iOS=Medium}"
+                                HorizontalOptions="Fill" />
+
+                            <Label
+                                Grid.Row="3"
+                                LineBreakMode="WordWrap"
+                                Text="{Binding Description}"
+                                TextColor="Black"
+                                FontSize="{OnPlatform Android=Subtitle, iOS=Medium}"
+                                HorizontalOptions="Fill" />
+
+                        </Grid>
+
+                    </Grid>
+
+                </Border>
+
+                <Label
+                    HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Информация предоставляется согласно "
+                                TextColor="{StaticResource White}" />
+                            <Span
+                                Text="Правилам пользования лентой новостей"
+                                TextColor="{StaticResource Secondary}"
+                                TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding OpenFeedTermsCommand}" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

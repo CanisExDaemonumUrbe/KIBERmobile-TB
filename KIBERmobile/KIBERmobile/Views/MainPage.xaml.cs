@@ -1,43 +1,23 @@
 using KIBERmobile.Models;
 using KIBERmobile.ViewModels;
 using KIBERmobile.Views.MainGroup;
+using KIBERmobile.Views.MainGroup.ProfileGroup;
 
 namespace KIBERmobile.Views;
 
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class MainPage : ContentPage
 {
-    private readonly FeedVM _vm;
-    
+    private readonly MainVM _vm;
+
     public MainPage()
     {
-        BindingContext = _vm = new FeedVM();
+        BindingContext = _vm = new MainVM();
         InitializeComponent();
     }
 
-    protected override void OnAppearing()
+    private async void GoToProfilePageAsync(object? sender, EventArgs e)
     {
-        base.OnAppearing();
-        _vm.OnAppearing();
-    }
-
-    private async void GoToResidentPageAsync(object? sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new ResidentPage());
-    }
-
-    private async void GoToParentPageAsync(object? sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new ParentPage());
-    }
-
-    private async void GoToNewsPageAsync(object? sender, SelectionChangedEventArgs e)
-    {
-        var selectedNews = e.CurrentSelection.FirstOrDefault() as News;
-        if (selectedNews != null)
-        {
-            await Navigation.PushAsync(new NewsPage(selectedNews.Id));
-            ((CollectionView)sender).SelectedItem = null;
-        }
+        await Navigation.PushAsync(new ProfilePage());
     }
 }

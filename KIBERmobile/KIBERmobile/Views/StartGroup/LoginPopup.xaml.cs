@@ -24,11 +24,4 @@ public partial class LoginPopup : Popup
         await CloseAsync(true, cts.Token);
     }
 
-
-    private async void RegistrationClickedAsync(object? sender, TappedEventArgs e)
-    {
-        var cts = new CancellationTokenSource(TimeSpan.FromSeconds(5));
-        await CloseAsync("guest", cts.Token);
-        
-    }
 }

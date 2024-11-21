@@ -13,7 +13,7 @@
 
     <ContentPage.Content>
         <ScrollView
-               VerticalScrollBarVisibility="Never">
+            VerticalScrollBarVisibility="Never">
             <StackLayout Margin="0,10"
                          Spacing="10">
                 <StackLayout Spacing="10"
@@ -30,7 +30,7 @@
                             </Grid>
 
                             <Grid Grid.Row="1"
-                                  RowDefinitions="auto, *, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto"
+                                  RowDefinitions="auto, *, auto, auto, auto, auto, auto, auto,auto, auto, auto, auto, auto, auto, auto"
                                   RowSpacing="10"
                                   Padding="20, 10, 20, 25">
 
@@ -84,10 +84,10 @@
                                       Grid.Row="5">
                                     <Label Style="{StaticResource InfoRow-Name}"
                                            Grid.Column="0"
-                                           Text="Филиал" />
+                                           Text="Номер телефона" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentCity}" />
+                                           Text="{Binding ResidentNumber}" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -97,10 +97,10 @@
                                       Grid.Row="6">
                                     <Label Style="{StaticResource InfoRow-Name}"
                                            Grid.Column="0"
-                                           Text="Локация" />
+                                           Text="Email" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
-                                           Text="{Binding ResidentLocation}" />
+                                           Text="{Binding Email}" />
                                     <BoxView Grid.Row="1"
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
@@ -108,19 +108,6 @@
 
                                 <Grid Style="{StaticResource User-InfoRow}"
                                       Grid.Row="7">
-                                    <Label Style="{StaticResource InfoRow-Name}"
-                                           Grid.Column="0"
-                                           Text="Группа" />
-                                    <Label Style="{StaticResource InfoRow-Value-Short}"
-                                           Grid.Column="1"
-                                           Text="{Binding ResidentGroup}" />
-                                    <BoxView Grid.Row="1"
-                                             Grid.ColumnSpan="2"
-                                             BackgroundColor="{StaticResource PrimaryDark}" />
-                                </Grid>
-
-                                <Grid Style="{StaticResource User-InfoRow}"
-                                      Grid.Row="8">
                                     <Label Style="{StaticResource InfoRow-Name}"
                                            Grid.Column="0"
                                            Text="ФИО родителя" />
@@ -133,10 +120,10 @@
                                 </Grid>
 
                                 <Grid Style="{StaticResource User-InfoRow}"
-                                      Grid.Row="9">
+                                      Grid.Row="8">
                                     <Label Style="{StaticResource InfoRow-Name}"
                                            Grid.Column="0"
-                                           Text="Номер" />
+                                           Text="Номер родителя" />
                                     <Label Style="{StaticResource InfoRow-Value-Short}"
                                            Grid.Column="1"
                                            Text="{Binding ParentPhone}" />
@@ -146,20 +133,7 @@
                                 </Grid>
 
                                 <Grid Style="{StaticResource User-InfoRow}"
-                                      Grid.Row="10">
-                                    <Label Style="{StaticResource InfoRow-Name}"
-                                           Grid.Column="0"
-                                           Text="E-mail" />
-                                    <Label Style="{StaticResource InfoRow-Value-Short}"
-                                           Grid.Column="1"
-                                           Text="{Binding ParentEmail}" />
-                                    <BoxView Grid.Row="1"
-                                             Grid.ColumnSpan="2"
-                                             BackgroundColor="{StaticResource PrimaryDark}" />
-                                </Grid>
-
-                                <Grid Style="{StaticResource User-InfoRow}"
-                                      Grid.Row="11">
+                                      Grid.Row="9">
                                     <Label Style="{StaticResource InfoRow-Name}"
                                            Grid.Column="0"
                                            Text="Дата начала обучения" />
@@ -170,6 +144,74 @@
                                              Grid.ColumnSpan="2"
                                              BackgroundColor="{StaticResource PrimaryDark}" />
                                 </Grid>
+
+                                <Grid Style="{StaticResource User-InfoRow}"
+                                      Grid.Row="10">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Column="0"
+                                           Text="Баланс киберонов" />
+                                    <Label Style="{StaticResource InfoRow-Value-Short}"
+                                           Grid.Column="1"
+                                           Text="{Binding KiberoneBalance}" />
+                                    <BoxView Grid.Row="1"
+                                             Grid.ColumnSpan="2"
+                                             BackgroundColor="{StaticResource PrimaryDark}" />
+                                </Grid>
+
+                                <Grid Style="{StaticResource User-InfoRow}"
+                                      Grid.Row="11">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Column="0"
+                                           Text="Филиал" />
+                                    <Label Style="{StaticResource InfoRow-Value-Short}"
+                                           Grid.Column="1"
+                                           Text="{Binding ResidentCity}" />
+                                    <BoxView Grid.Row="1"
+                                             Grid.ColumnSpan="2"
+                                             BackgroundColor="{StaticResource PrimaryDark}" />
+                                </Grid>
+
+                                <Grid Style="{StaticResource User-InfoRow}"
+                                      Grid.Row="12">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Column="0"
+                                           Text="Локация" />
+                                    <Label Style="{StaticResource InfoRow-Value-Short}"
+                                           Grid.Column="1"
+                                           Text="{Binding ResidentLocation}" />
+                                    <BoxView Grid.Row="1"
+                                             Grid.ColumnSpan="2"
+                                             BackgroundColor="{StaticResource PrimaryDark}" />
+                                </Grid>
+
+                                <Grid Style="{StaticResource User-InfoRow}"
+                                      Grid.Row="13">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Column="0"
+                                           Text="Группа" />
+                                    <Label Style="{StaticResource InfoRow-Value-Short}"
+                                           Grid.Column="1"
+                                           Text="{Binding ResidentGroup}" />
+                                    <BoxView Grid.Row="1"
+                                             Grid.ColumnSpan="2"
+                                             BackgroundColor="{StaticResource PrimaryDark}" />
+                                </Grid>
+
+
+                                <Grid Style="{StaticResource User-InfoRow}"
+                                      Grid.Row="14">
+                                    <Label Style="{StaticResource InfoRow-Name}"
+                                           Grid.Column="0"
+                                           Text="Учебный модуль" />
+                                    <Label Style="{StaticResource InfoRow-Value-Short}"
+                                           Grid.Column="1"
+                                           Text="{Binding ResidentModule}" />
+                                    <BoxView Grid.Row="1"
+                                             Grid.ColumnSpan="2"
+                                             BackgroundColor="{StaticResource PrimaryDark}" />
+                                </Grid>
+
+
                             </Grid>
                         </Grid>
                     </Border>
