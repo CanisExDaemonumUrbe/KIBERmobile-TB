@@ -81,14 +81,5 @@
                 </ScrollView>
             </RefreshView>
         </Grid>
-        <!-- <Grid RowDefinitions="*"> -->
-        <!--      -->
-        <!--     <BoxView Grid.Row="0" -->
-        <!--              x:Name="DarkOverlay" -->
-        <!--              BackgroundColor="Black" -->
-        <!--              Opacity="0.5" -->
-        <!--              IsVisible="True" -->
-        <!--              Margin="0,-100"/> -->
-        <!-- </Grid> -->
     </ContentPage.Content>
 </ContentPage>

@@ -29,13 +29,13 @@
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
     </ItemGroup>
 
-<!--    <ItemGroup>-->
-<!--        <MauiSplashScreen Include="Resources\Splash\maui_splash_ios.svg" Resize="true" Color="#0E4963" />-->
-<!--    </ItemGroup>-->
-    
     <ItemGroup>
-        <MauiSplashScreen Include="Resources\Splash\maui_splash_droid.png" Resize="true"/>
+        <MauiSplashScreen Include="Resources\Splash\maui_splash_ios.svg" Resize="true" Color="#0E4963" />
     </ItemGroup>
+    
+<!--    <ItemGroup>-->
+<!--        <MauiSplashScreen Include="Resources\Splash\maui_splash_droid.png" Resize="true" Color="#0E4963"/>-->
+<!--    </ItemGroup>-->
     
     <ItemGroup>
       <MauiXaml Update="Views\MenuGroup\SupportPage.xaml">

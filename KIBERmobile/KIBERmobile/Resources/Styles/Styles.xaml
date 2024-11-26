@@ -21,12 +21,6 @@
         <Setter Property="BarTextColor" Value="{StaticResource White}" />
     </Style>
 
-    <Style x:Key="MainTabbed-Element-BigHeader"
-           BasedOn="{StaticResource MainTabbed-Element}"
-           TargetType="NavigationPage">
-        <Setter Property="ios:NavigationPage.PrefersLargeTitles" Value="True" />
-    </Style>
-
     <Style x:Key="RefreshPage" TargetType="RefreshView">
         <Setter Property="RefreshColor" Value="{StaticResource Tertiary}" />
     </Style>

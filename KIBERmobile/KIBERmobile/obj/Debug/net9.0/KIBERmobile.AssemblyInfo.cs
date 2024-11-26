@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KIBERmobile")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+947fdb23af03e07471cb81b683c424e2b747777f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85fb97373c2db5f2b823f60d1855fd328f38d247")]
 [assembly: System.Reflection.AssemblyProductAttribute("KIBERmobile")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KIBERmobile")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

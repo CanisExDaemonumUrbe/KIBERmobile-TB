@@ -6,8 +6,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-
-    ios:Page.LargeTitleDisplay="Always"
+    
     Title="Поддержка"
     BackgroundColor="{StaticResource PrimaryDark}"
     Padding="10, 0">

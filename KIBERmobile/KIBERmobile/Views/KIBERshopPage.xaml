@@ -8,8 +8,7 @@
     xmlns:vm="clr-namespace:KIBERmobile.ViewModels"
     xmlns:m="clr-namespace:KIBERmobile.Models"
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-
-    ios:Page.LargeTitleDisplay="Never"
+    
     BackgroundColor="{StaticResource PrimaryDark}">
 
     <NavigationPage.TitleView>
@@ -53,23 +52,34 @@
                     Margin="-5,0">
 
                     <CollectionView.Header>
-                        <Grid Padding="5,10,5,10"
+                        <Grid Padding="5,10"
                               RowDefinitions="auto, auto"
                               RowSpacing="10">
 
-                            <Button Grid.Row="0"
-                                    Text="История изменения баланса киберонов"
-                                    LineBreakMode="TailTruncation"
-                                    HorizontalOptions="Fill"
-                                    BackgroundColor="{StaticResource Tertiary}"
-                                    HeightRequest="50"
-                                    CornerRadius="15"
-                                    BorderWidth="1"
-                                    BorderColor="{StaticResource Black}"
-                                    FontAttributes="Bold"
-                                    FontSize="18"
-                                    TextColor="{StaticResource White}"
-                                    Clicked="GoToHistoryPageAsync" />
+                            <Border Style="{StaticResource MenuPlate}">
+                                <StackLayout Style="{StaticResource MenuPlate-ButtonListWrapper}">
+                                    <Grid Style="{StaticResource MenuPlate-Header}">
+                                        <Label Grid.Row="0"
+                                               Style="{StaticResource MenuPlate-Header-Label}"
+                                               Text="Кибероны" />
+                                        <BoxView Grid.Row="1"
+                                                 BackgroundColor="{StaticResource Primary}" />
+                                    </Grid>
+                                    <Grid Style="{StaticResource MenuPlate-ButtonWrapper}">
+                                        <BoxView Style="{StaticResource MenuPlate-ButtonBackground}" />
+                                        <Image Style="{StaticResource MenuPlate-Button-Icon}"
+                                               Source="icon_k_value"
+                                               Margin="15,0"/>
+                                        <Label Style="{StaticResource MenuPlate-Button-SpanLabel}"
+                                               Text="История изменения баланса" />
+                                        <Image Style="{StaticResource MenuPlate-Button-MoreIcon}"/>
+                                        <Button
+                                            Style="{StaticResource MenuPlate-Button}"
+                                            Clicked="GoToHistoryPageAsync"/>
+                                    </Grid>
+                                    
+                                </StackLayout>
+                            </Border>
                             
                             <Label Grid.Row="1"
                                    Text="Копи Кибероны и оплачивай ими KIBERтовары!"
@@ -79,7 +89,8 @@
                                    VerticalOptions="Center"
                                    HorizontalOptions="Center"
                                    HorizontalTextAlignment="Center"
-                                   VerticalTextAlignment="Center"/>
+                                   VerticalTextAlignment="Center"
+                                   Margin="0,5"/>
                             
                         </Grid>
                     </CollectionView.Header>

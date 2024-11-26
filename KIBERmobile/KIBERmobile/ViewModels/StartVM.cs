@@ -30,6 +30,7 @@ public class StartVM : BaseViewModel
 
     public StartVM()
     {
+        SetStatusOK("Подключение к серверу...");
         RefreshViewCommand = new Command(async () => await RefreshView());
     }
 

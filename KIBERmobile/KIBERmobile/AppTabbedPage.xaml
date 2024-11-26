@@ -8,7 +8,7 @@
             Style="{StaticResource MainTabbed}">
 
     <NavigationPage
-        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Style="{StaticResource MainTabbed-Element}"
         Title="Главная"
         IconImageSource="icon_home">
         <x:Arguments>
@@ -17,7 +17,7 @@
     </NavigationPage>
 
     <NavigationPage
-        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Style="{StaticResource MainTabbed-Element}"
         Title="KIBERshop"
         IconImageSource="icon_kibershop">
         <x:Arguments>
@@ -26,7 +26,7 @@
     </NavigationPage>
 
     <NavigationPage
-        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Style="{StaticResource MainTabbed-Element}"
         Title="Новости"
         IconImageSource="icon_news">
         <x:Arguments>
@@ -35,7 +35,7 @@
     </NavigationPage>
 
     <NavigationPage
-        Style="{StaticResource MainTabbed-Element-BigHeader}"
+        Style="{StaticResource MainTabbed-Element}"
         Title="Меню"
         IconImageSource="icon_menu">
         <x:Arguments>
